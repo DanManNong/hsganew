@@ -32,6 +32,36 @@
     overflow-x: hidden;
     max-width: 100%;
   }
+
+  /* ====== STAGING BANNER — chỉ hiện trên URL tạm (preview), ẩn trên hsga.vn ====== */
+  #stagingBanner {
+    display: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background: linear-gradient(90deg, #ED1C24, #FF6B3D, #ED1C24);
+    background-size: 200% 100%;
+    animation: stagingShimmer 4s ease infinite;
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 20px rgba(237, 28, 36, 0.45);
+  }
+  #stagingBanner.show { display: block; }
+  #stagingBanner span { opacity: 0.92; }
+  @keyframes stagingShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+  @media (max-width: 480px) {
+    #stagingBanner { font-size: 9.5px; letter-spacing: 0.15em; padding: 7px 10px; }
+  }
   body {
     font-family: 'Inter', 'Myriad Pro', Arial, Helvetica, sans-serif;
     background: var(--hsu-blue);
@@ -1002,6 +1032,20 @@
 </style>
 </head>
 <body class="min-h-screen flex flex-col">
+
+  <!-- STAGING BANNER — hiện khi không phải hsga.vn (preview/dev) -->
+  <div id="stagingBanner"><i class="fas fa-wrench" style="margin-right:10px"></i><span>ĐANG SỬA CHỮA · WEB TẠM · CHƯA PHẢI BẢN CHÍNH THỨC</span></div>
+  <script>
+    (function () {
+      var h = location.hostname;
+      // Hiện banner nếu không phải hsga.vn và www.hsga.vn (production)
+      if (h !== 'hsga.vn' && h !== 'www.hsga.vn') {
+        var el = document.getElementById('stagingBanner');
+        if (el) el.classList.add('show');
+      }
+    })();
+  </script>
+
 
   <!-- LANG NAV -->
   <nav class="lang-section stagger">
