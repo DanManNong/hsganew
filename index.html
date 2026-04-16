@@ -121,6 +121,13 @@
     font-weight: 300;
     text-transform: uppercase;
   }
+  .click-hint {
+    font-size: 8px;
+    color: rgb(148, 163, 184); /* slate-400 */
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
 
   /* ===== HSU LOGO ===== */
   .hsu-logo {
@@ -842,14 +849,14 @@
     .constellation { height: 1400px; }
     .name-modern { letter-spacing: 0.2em; }
     .star { width: 68px; height: 68px; font-size: 9px; }
-    .star.community { width: 38px; height: 38px; }
+    .star.community { width: 61px; height: 61px; } /* 90% của BCN 68px */
     .hsu-logo { width: 140px; height: 140px; font-size: 32px; }
     .modal-box { padding: 2rem 1.25rem; }
     .modal-header { flex-direction: column; text-align: center; gap: 18px; }
     .info-grid { grid-template-columns: 1fr; }
     .slogan-copper { letter-spacing: 0.35em; text-indent: 0.35em; }
     .section-title { font-size: 16px; letter-spacing: 0.2em; }
-    .section-sub { font-size: 10px; letter-spacing: 0.15em; }
+    .section-sub { font-size: 8px; letter-spacing: 0.06em; white-space: nowrap; }
     .member-card { padding: 2rem 1rem 1.5rem; }
     .member-card .member-name { font-size: 12px; min-height: 32px; }
     .member-card .member-role { font-size: 7.5px; }
@@ -868,14 +875,29 @@
     footer { padding: 2rem 1rem !important; }
     .star::after { inset: -16px; }
     .star::before { inset: -10px; }
+    /* Subtitle: mỗi dòng fit 1 hàng trên mobile */
+    .subtitle-zen {
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-indent: 0.08em;
+      white-space: nowrap;
+    }
+    /* Click hint 1 hàng trên mobile */
+    .click-hint {
+      font-size: 7px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
   }
   @media (max-width: 420px) {
     .name-modern { font-size: clamp(2.4rem, 14vw, 4rem); letter-spacing: 0.15em; }
     .slogan-copper { font-size: 8px; letter-spacing: 0.25em; text-indent: 0.25em; }
-    .subtitle-zen { font-size: 15px; letter-spacing: 0.3em; text-indent: 0.3em; }
+    .subtitle-zen { font-size: 9.5px; letter-spacing: 0.04em; text-indent: 0; }
+    .click-hint { font-size: 6.5px; letter-spacing: 0; }
+    .section-sub { font-size: 7.5px; letter-spacing: 0.03em; }
     .member-avatar { width: 70px; height: 70px; }
     .star { width: 60px; height: 60px; }
-    .star.community { width: 32px; height: 32px; }
+    .star.community { width: 54px; height: 54px; } /* 90% của BCN 60px */
     .constellation { height: 1200px; }
     .modal-avatar { width: 88px; height: 88px; font-size: 24px; }
   }
@@ -909,8 +931,11 @@
     <!-- HSGA TITLE -->
     <h1 class="name-modern mb-6 stagger" style="animation-delay: 0.4s">HSGA</h1>
     <div class="w-16 h-[0.5px] bg-[#009FE8]/50 mb-8 stagger" style="animation-delay: 0.4s"></div>
-    <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni</p>
-    <p class="subtitle-zen mb-3 stagger" style="animation-delay: 0.5s">Câu lạc bộ Hội viên</p>
+    <!-- Desktop: 4 dòng -->
+    <p class="subtitle-zen mb-4 stagger hidden md:block" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni</p>
+    <p class="subtitle-zen mb-3 stagger hidden md:block" style="animation-delay: 0.5s">Câu lạc bộ Hội viên</p>
+    <!-- Mobile: gộp dòng 1+2 → 3 dòng tổng -->
+    <p class="subtitle-zen mb-3 stagger md:hidden" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni · Câu lạc bộ Hội viên</p>
     <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s; opacity:0.5">Nơi những vì sao Hoa Sen hội tụ</p>
     <p class="subtitle-zen mb-16 stagger" style="animation-delay: 0.55s; opacity:0.4">★ Ban chủ nhiệm và Hội viên Cộng đồng ★</p>
 
@@ -921,7 +946,7 @@
       <a href="https://www.hoasen.edu.vn/saudaihoc/tin-tuc-su-kien/" target="_blank" rel="noopener" class="zen-btn"><i class="fas fa-calendar-alt mr-3"></i>Sự kiện</a>
     </div>
 
-    <p class="text-[8px] text-slate-400 uppercase tracking-[0.3em] mb-6 stagger" style="animation-delay: 0.7s">
+    <p class="click-hint mb-6 stagger" style="animation-delay: 0.7s">
       ◆ Click vào bất kỳ ngôi sao nào trong hội viên để khám phá ◆
     </p>
 
