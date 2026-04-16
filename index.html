@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<!-- HSGA v5.5 · HSU Brand Guideline: Blue #024DA1 + Cyan #009FE8 + Red #ED1C24 · Lotus icon · 73 stars -->
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSGA — Hoa Sen Graduate Alumni · Câu lạc bộ Hội viên</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Font: Myriad Pro / Arial (HSU Brand Guideline) -->
+<style>
+  :root {
+    --hsu-blue: #024DA1;
+    --hsu-dark: #012B6B;
+    --hsu-cyan: #009FE8;
+    --hsu-red: #ED1C24;
+    --hsu-yellow: #FFF100;
+    --hsu-gray: #D9D9D9;
+    --hsu-text: #FFFFFF;
+    --hsu-border: rgba(255, 255, 255, 0.18);
+    /* Legacy aliases for JS-generated styles */
+    --zen-bg: #024DA1;
+    --zen-text: #FFFFFF;
+    --zen-copper: #009FE8;
+    --zen-border: rgba(255, 255, 255, 0.18);
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    background: var(--hsu-blue);
+    color: var(--zen-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 L50 30 L40 25 L30 30 Z M40 10 L45 28 M40 10 L35 28 M25 35 L40 28 L55 35' fill='none' stroke='%23FFFFFF' stroke-width='0.5' stroke-opacity='0.07'/%3E%3Crect x='0' y='0' width='80' height='80' fill='none' stroke='%23FFFFFF' stroke-width='0.3' stroke-opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .lang-section {
+    width: 100%;
+    border-bottom: 1px solid var(--zen-border);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  .lang-btn {
+    font-size: 9px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .lang-btn.active, .lang-btn:hover { color: var(--hsu-cyan); }
+
+  .slogan-copper {
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    font-size: clamp(8px, 2.3vw, 11px);
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .footer-copper {
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    font-size: clamp(6px, 1.8vw, 8px);
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .name-modern {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(3rem, 13vw, 8rem);
+    color: var(--zen-copper);
+    letter-spacing: 0.22em;
+    padding-left: 0.22em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(110deg, #009FE8 0%, #60C8FF 25%, #ffffff 50%, #60C8FF 75%, #009FE8 100%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 8s ease infinite;
+    display: block;
+    width: 100%;
+    filter: drop-shadow(0 6px 30px rgba(0, 159, 232, 0.35));
+  }
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .subtitle-zen {
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-size: clamp(9px, 1.8vw, 11px);
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  /* ===== HSU LOGO ===== */
+  .hsu-logo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background:
+      radial-gradient(circle at 50% 45%, rgba(0, 159, 232, 0.18), rgba(1,43,107,0.7) 55%, rgba(1,20,60,0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow:
+      0 0 100px rgba(255, 255, 255, 0.35),
+      0 0 50px rgba(255, 255, 255, 0.2),
+      inset 0 0 60px rgba(0,0,0,0.6),
+      inset 0 0 20px rgba(0, 159, 232, 0.12);
+    position: relative;
+    animation: logoGlow 5s ease-in-out infinite;
+  }
+  .hsu-logo img {
+    width: 72%;
+    height: auto;
+    object-fit: contain;
+    filter:
+      drop-shadow(0 0 25px rgba(0, 159, 232, 0.75))
+      drop-shadow(0 0 8px rgba(255, 245, 220, 0.6))
+      brightness(1.18);
+    animation: logoFloat 6s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+  }
+  .hsu-logo::before {
+    content: "";
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: ringPulse 5s ease-in-out infinite;
+  }
+  .hsu-logo::after {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: ringPulse 5s ease-in-out infinite;
+    animation-delay: 1.2s;
+  }
+  @keyframes logoGlow {
+    0%, 100% {
+      box-shadow:
+        0 0 100px rgba(255, 255, 255, 0.35),
+        0 0 50px rgba(255, 255, 255, 0.2),
+        inset 0 0 60px rgba(0,0,0,0.6),
+        inset 0 0 20px rgba(0, 159, 232, 0.12);
+    }
+    50% {
+      box-shadow:
+        0 0 150px rgba(255, 255, 255, 0.55),
+        0 0 80px rgba(255, 255, 255, 0.35),
+        inset 0 0 60px rgba(0,0,0,0.6),
+        inset 0 0 30px rgba(0, 159, 232, 0.2);
+    }
+  }
+  @keyframes logoFloat {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      filter:
+        drop-shadow(0 0 25px rgba(0, 159, 232, 0.75))
+        drop-shadow(0 0 8px rgba(255, 245, 220, 0.6))
+        brightness(1.18);
+    }
+    50% {
+      transform: translateY(-4px) scale(1.03);
+      filter:
+        drop-shadow(0 0 40px rgba(0, 159, 232, 1))
+        drop-shadow(0 0 15px rgba(255, 245, 220, 0.85))
+        brightness(1.35);
+    }
+  }
+  @keyframes ringPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.04); }
+  }
+
+  /* ===== STAR FIELD ===== */
+  .constellation {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 1100px;
+    margin: 60px auto 80px;
+  }
+
+  .star {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(0, 159, 232, 0.2), rgba(1,43,107,0.7) 70%);
+    border: 1px solid var(--zen-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--zen-copper);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    animation: floatStar 14s ease-in-out infinite, twinkle 3s ease-in-out infinite;
+  }
+  .star::before {
+    content: "";
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: pulseRing 4s ease-in-out infinite;
+  }
+  .star::after {
+    content: "";
+    position: absolute;
+    inset: -28px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    animation: pulseRing 4s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  .star:hover {
+    transform: scale(1.25);
+    border-color: var(--zen-copper);
+    background: radial-gradient(circle at 35% 35%, rgba(0, 159, 232, 0.4), rgba(1,43,107,0.5) 70%);
+    box-shadow: 0 0 60px rgba(0, 159, 232, 0.7);
+    z-index: 20;
+    animation-play-state: paused;
+  }
+  .star .star-tooltip {
+    position: absolute;
+    bottom: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,10,40,0.95);
+    border: 1px solid var(--zen-border);
+    color: var(--zen-copper);
+    padding: 10px 16px;
+    font-size: 8.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 30;
+  }
+  .star .star-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--zen-border);
+  }
+  .star:hover .star-tooltip { opacity: 1; }
+
+  .star .star-logo {
+    width: 68%;
+    height: auto;
+    opacity: 0.82;
+    filter:
+      drop-shadow(0 0 10px rgba(0, 159, 232, 0.55))
+      drop-shadow(0 0 4px rgba(255,245,220,0.4))
+      brightness(1.15);
+    pointer-events: none;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+  }
+
+  /* Avatar photo in star */
+  .star .star-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.88;
+    filter: brightness(1.05);
+    transition: opacity 0.4s ease, filter 0.4s ease;
+    pointer-events: none;
+  }
+  .star:hover .star-photo {
+    opacity: 1;
+    filter: brightness(1.15) drop-shadow(0 0 12px rgba(0, 159, 232, 0.7));
+  }
+  .star:hover .star-logo {
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 18px rgba(0, 159, 232, 0.95))
+      drop-shadow(0 0 8px rgba(255,245,220,0.7))
+      brightness(1.3);
+  }
+  .star .star-role {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5.5px;
+    color: rgba(255, 242, 0, 0.85);
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+
+  /* ===== COMMUNITY STAR (nhỏ hơn, mờ hơn) ===== */
+  .star.community {
+    width: 72px;
+    height: 72px;
+    opacity: 0.72;
+    background: radial-gradient(circle at 35% 35%, rgba(0, 159, 232, 0.12), rgba(1,43,107,0.6) 70%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: floatStar 18s ease-in-out infinite, twinkle 4.5s ease-in-out infinite;
+  }
+  .star.community::before {
+    inset: -8px;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  .star.community::after {
+    inset: -16px;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .star.community:hover {
+    opacity: 1;
+    transform: scale(1.4);
+    box-shadow: 0 0 40px rgba(0, 159, 232, 0.55);
+  }
+  .star.community .star-logo {
+    width: 70%;
+    opacity: 0.65;
+    filter: drop-shadow(0 0 5px rgba(0, 159, 232, 0.4)) brightness(1.1);
+  }
+  .star.community:hover .star-logo {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(0, 159, 232, 0.8)) brightness(1.3);
+  }
+
+  @keyframes floatStar {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(10px, -14px); }
+    50% { transform: translate(-6px, -22px); }
+    75% { transform: translate(-12px, -8px); }
+  }
+  @keyframes twinkle {
+    0%, 100% {
+      filter: brightness(1);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      filter: brightness(1.4);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+  }
+  @keyframes pulseRing {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.15); }
+  }
+
+  .zen-box {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--zen-border);
+    transition: 0.4s;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .zen-box:hover {
+    border-color: var(--zen-copper);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+  }
+
+
+  /* Community card (nhỏ hơn BCN card) */
+  .community-card {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.25rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .community-card:hover {
+    border-color: var(--zen-copper);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+  }
+  .community-card .c-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--zen-copper);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .community-card .c-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    min-height: 26px;
+    line-height: 1.4;
+  }
+  .community-card .c-role {
+    font-size: 7px;
+    color: var(--zen-copper);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.75;
+  }
+  .community-card .c-cohort {
+    font-size: 7px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+  /* MEMBER CARD */
+  .member-card {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--zen-border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .member-card.chairman {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0,0,0,0.4));
+  }
+  .member-card.chairman::before {
+    content: "CHỦ NHIỆM";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--hsu-red);
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: 700;
+    padding: 4px 14px;
+    letter-spacing: 0.2em;
+  }
+  .member-card:hover {
+    border-color: var(--zen-copper);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+  }
+  .member-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid var(--zen-border);
+    background: rgba(255, 255, 255, 0.08);
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--zen-copper);
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+  }
+  .member-name {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    color: #fff;
+    min-height: 36px;
+  }
+  .member-role {
+    font-size: 8px;
+    color: var(--zen-copper);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 10px;
+    min-height: 28px;
+  }
+  .member-org {
+    font-size: 8.5px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    flex-grow: 1;
+  }
+  .member-cohort {
+    font-size: 7.5px;
+    color: var(--zen-copper);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    opacity: 0.7;
+  }
+
+  .zen-btn {
+    padding: 14px 36px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: 0.5s;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .zen-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .stagger { opacity: 0; animation: fadeUp 1.2s forwards; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--zen-border);
+  }
+  .section-sub {
+    font-size: 8px;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  /* ====== MODAL (V3 zen theme) ====== */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(1, 20, 60, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1000;
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
+  .modal-backdrop.active {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .modal-box {
+    background: #012B6B;
+    border: 1px solid var(--zen-border);
+    max-width: 780px;
+    width: 100%;
+    padding: 3rem 2.5rem;
+    position: relative;
+    color: var(--zen-text);
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.2);
+    animation: slideUp 0.5s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--zen-border);
+    background: transparent;
+    color: var(--zen-copper);
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--zen-copper);
+    transform: rotate(90deg);
+  }
+
+  .modal-header {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--zen-border);
+    margin-bottom: 2rem;
+  }
+  .modal-avatar {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    border-radius: 50%;
+    border: 1px solid var(--zen-border);
+    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.3), rgba(0,0,0,0.6) 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--zen-copper);
+    font-size: 28px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.25);
+  }
+  .modal-avatar.chair {
+    border-color: var(--zen-copper);
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.45);
+  }
+  .modal-title h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .modal-title .role {
+    font-size: 10px;
+    color: var(--zen-copper);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 6px;
+  }
+  .modal-title .tagline {
+    font-size: 9px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em;
+    line-height: 1.7;
+  }
+  .chair-badge {
+    display: inline-block;
+    background: var(--zen-copper);
+    color: #2C2C2C;
+    font-size: 7.5px;
+    font-weight: 700;
+    padding: 4px 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .field-group {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .field-group:last-of-type { border-bottom: none; }
+  .field-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--zen-copper);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+  }
+  .field-content {
+    font-size: 13px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .field-content .bullet {
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .field-content .bullet::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--zen-copper);
+    font-size: 8px;
+    top: 9px;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .info-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--zen-border);
+    padding: 12px 14px;
+  }
+  .info-item .lbl {
+    font-size: 7px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 4px;
+  }
+  .info-item .val {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .personal-link-btn {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--zen-copper);
+    color: var(--zen-copper);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: 0.4s;
+    background: transparent;
+  }
+  .personal-link-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  }
+  .personal-link-url {
+    text-align: center;
+    font-size: 8px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.2em;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .constellation { height: 1600px; }
+    .name-modern { letter-spacing: 0.2em; }
+    .star { width: 72px; height: 72px; font-size: 9px; }
+    .hsu-logo { width: 160px; height: 160px; font-size: 32px; }
+    .modal-box { padding: 2rem 1.25rem; }
+    .modal-header { flex-direction: column; text-align: center; gap: 18px; }
+    .info-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- LANG NAV -->
+  <nav class="lang-section stagger">
+    <div class="lang-btn active">VN</div>
+    <div class="lang-btn">EN</div>
+    <div class="lang-btn">CN</div>
+    <div class="lang-btn">KR</div>
+    <div class="lang-btn">JP</div>
+  </nav>
+
+  <!-- SLOGAN -->
+  <header class="p-12 md:p-16 stagger">
+    <div class="slogan-copper">HOA SEN UNIVERSITY · GLOBAL ALUMNI · SINCE 1991</div>
+  </header>
+
+  <main class="flex-grow flex flex-col items-center z-10 px-4">
+
+    <!-- HSU LOGO -->
+    <div class="mb-12 stagger" style="animation-delay: 0.2s">
+      <div class="hsu-logo">
+        <img src="./HSU-NoTag-W-VIE.png" alt="Đại học Hoa Sen" />
+      </div>
+    </div>
+
+    <!-- HSGA TITLE -->
+    <h1 class="name-modern mb-6 stagger" style="animation-delay: 0.4s">HSGA</h1>
+    <div class="w-16 h-[0.5px] bg-[#009FE8]/50 mb-8 stagger" style="animation-delay: 0.4s"></div>
+    <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni</p>
+    <p class="subtitle-zen mb-3 stagger" style="animation-delay: 0.5s">Câu lạc bộ Hội viên</p>
+    <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s; opacity:0.5">Nơi những vì sao Hoa Sen hội tụ</p>
+    <p class="subtitle-zen mb-16 stagger" style="animation-delay: 0.55s; opacity:0.4">★ 13 BCN · ◦ 60 Hội viên Cộng đồng ★</p>
+
+    <!-- CTA -->
+    <div class="mb-10 stagger flex flex-col md:flex-row gap-4 justify-center items-center" style="animation-delay: 0.6s">
+      <button class="zen-btn"><i class="fas fa-user-plus mr-3"></i>Đăng ký hội viên</button>
+      <button class="zen-btn"><i class="fas fa-info-circle mr-3"></i>Về HSGA</button>
+      <button class="zen-btn"><i class="fas fa-calendar-alt mr-3"></i>Sự kiện</button>
+    </div>
+
+    <p class="text-[8px] text-slate-400 uppercase tracking-[0.3em] mb-6 stagger" style="animation-delay: 0.7s">
+      ◆ Click vào bất kỳ ngôi sao nào trong 73 hội viên để khám phá ◆
+    </p>
+
+    <!-- CONSTELLATION -->
+    <div class="constellation stagger" style="animation-delay: 0.8s" id="constellation"></div>
+
+    <!-- BAN CHỦ NHIỆM SECTION -->
+    <section class="w-full max-w-7xl mb-32 stagger px-4" style="animation-delay: 1s">
+      <h2 class="section-title">Ban Chủ nhiệm HSGA</h2>
+      <p class="section-sub">Nhiệm kỳ 2026 — 2027 · 13 thành viên</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="membersGrid"></div>
+    </section>
+
+
+    <!-- CỘNG ĐỒNG HSGA SECTION -->
+    <section class="w-full max-w-7xl mb-32 stagger px-4" style="animation-delay: 1.1s">
+      <h2 class="section-title">Cộng đồng HSGA</h2>
+      <p class="section-sub">60 Hội viên · Học viên · Cựu học viên · Sinh viên · Đối tác</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4" id="communityGrid"></div>
+    </section>
+
+    <!-- HOẠT ĐỘNG -->
+    <section class="w-full max-w-6xl mb-32 stagger px-4" style="animation-delay: 1.2s">
+      <h2 class="section-title">Hoạt động & Tin tức</h2>
+      <p class="section-sub">Tin tức · Sự kiện · Networking</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="zen-box p-8 text-left">
+          <i class="fas fa-calendar-alt text-xl mb-6 text-[#009FE8]"></i>
+          <span class="text-[8px] text-slate-400 uppercase mb-3 block tracking-widest">Sự kiện / 2026</span>
+          <h4 class="text-[10px] font-bold uppercase mb-4 leading-relaxed tracking-widest">Đại hội Hội viên HSGA thường niên</h4>
+          <span class="text-[8px] text-[#009FE8] uppercase font-semibold tracking-widest">Khám phá →</span>
+        </div>
+        <div class="zen-box p-8 text-left">
+          <i class="fas fa-handshake text-xl mb-6 text-[#009FE8]"></i>
+          <span class="text-[8px] text-slate-400 uppercase mb-3 block tracking-widest">Networking</span>
+          <h4 class="text-[10px] font-bold uppercase mb-4 leading-relaxed tracking-widest">HSGA Talks · Mỗi tháng</h4>
+          <span class="text-[8px] text-[#009FE8] uppercase font-semibold tracking-widest">Khám phá →</span>
+        </div>
+        <div class="zen-box p-8 text-left">
+          <i class="fas fa-graduation-cap text-xl mb-6 text-[#009FE8]"></i>
+          <span class="text-[8px] text-slate-400 uppercase mb-3 block tracking-widest">Mentorship</span>
+          <h4 class="text-[10px] font-bold uppercase mb-4 leading-relaxed tracking-widest">Cố vấn Sinh viên Hoa Sen</h4>
+          <span class="text-[8px] text-[#009FE8] uppercase font-semibold tracking-widest">Khám phá →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="w-full max-w-5xl border-t border-[#009FE8]/20 pt-16 mb-20 stagger px-4" style="animation-delay: 1.4s">
+      <h2 class="section-title">Kết nối với HSGA</h2>
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+        <a href="tel:+84915159499" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fas fa-phone-alt text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">Hotline</span>
+        </a>
+        <a href="mailto:hello@hsga.vn" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fas fa-envelope text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">Email</span>
+        </a>
+        <a href="#" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fas fa-comment-dots text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">Zalo</span>
+        </a>
+        <a href="#" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fab fa-facebook-f text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">Facebook</span>
+        </a>
+        <a href="#" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fab fa-youtube text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">YouTube</span>
+        </a>
+        <a href="#" class="zen-box flex flex-col items-center justify-center min-h-[100px]">
+          <i class="fab fa-linkedin-in text-[#009FE8] mb-3"></i>
+          <span class="text-[9px] font-bold uppercase tracking-widest">LinkedIn</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="p-16 flex flex-col items-center stagger" style="animation-delay: 1.6s">
+    <div class="w-12 h-[0.5px] bg-[#009FE8]/30 mb-8"></div>
+    <div class="footer-copper mb-3">HSGA · HOA SEN GRADUATE ALUMNI</div>
+    <div class="footer-copper" style="opacity:0.5">© 2026 ALL RIGHTS RESERVED · HSGA.VN</div>
+  </footer>
+
+  <!-- ====== MODAL ====== -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // ====== DỮ LIỆU 13 THÀNH VIÊN BAN CHỦ NHIỆM HSGA 2026-2027 ======
+    const members = [
+      {
+        id:1,
+        initials:"NTP",
+        name:"Nguyễn Tấn Phong",
+        phone:"0915159499",avatar:"avatars/0915159499.jpg",
+        role:"Chủ nhiệm HSGA",
+        isChair:true,
+        position:"Trưởng VP Đại diện phía Nam",
+        organization:"Trung tâm Tư vấn Pháp luật — Hiệp hội Thương mại Điện tử Việt Nam (VECOM)",
+        cohort:"Học viên MBA Khóa 17",
+        tagline:"Tri thức · Pháp luật · Công nghệ",
+        bio:"Chuyên gia với hơn 15 năm kinh nghiệm trong lĩnh vực pháp luật thương mại điện tử, đồng thời là giảng viên, nhà nghiên cứu và trọng tài viên hoạt động tích cực trong cộng đồng pháp lý Việt Nam.",
+        education:["Cử nhân Tiếng Anh — Đại học Hoa Sen","Thạc sĩ Quản trị Kinh doanh (MBA) — Đại học Hoa Sen","Thạc sĩ Luật Hình sự"],
+        expertise:["Pháp luật TMĐT","Trọng tài Thương mại","Luật Hình sự Kinh tế","Quản trị Rủi ro"],
+        achievements:["Diễn giả Hội nghị VECOM toàn quốc 2026","Trọng tài viên TRACENT","Giám đốc CLEAD","Giảng viên cao cấp EAGLE Academy"],
+        email:"hello@nguyentanphong.com",
+        website:"nguyentanphong.com"
+      },
+      {
+        id:2, initials:"TNHP", name:"Trần Nguyễn Hồng Phương", phone:"0902938962",avatar:"avatars/0902938962.jpg",
+        role:"Thành viên BCN", position:"Giám đốc dự án",
+        organization:"Công ty Cổ phần Đầu tư T&A",
+        cohort:"Học viên MBA Khóa 16",
+        tagline:"Đầu tư · Quản lý dự án",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 16 — Đại học Hoa Sen"],
+        expertise:["Quản lý dự án","Đầu tư"],
+        achievements:["Đang cập nhật"],
+        email:"member2@hsga.vn", website:""
+      },
+      {
+        id:3, initials:"NQT", name:"Nguyễn Quang Tuấn", phone:"0900000003",
+        role:"Thành viên BCN", position:"Phó Giám đốc Trung tâm Điều độ cảng",
+        organization:"Tổng Công ty Tân Cảng Sài Gòn",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Logistics · Vận hành cảng",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Logistics","Vận hành cảng biển","Quản lý chuỗi cung ứng"],
+        achievements:["Đang cập nhật"],
+        email:"member3@hsga.vn", website:""
+      },
+      {
+        id:4, initials:"TPST", name:"Trần Phạm Sơn Tùng", phone:"0969056844",
+        role:"Thành viên BCN", position:"Giám đốc kinh doanh",
+        organization:"Công ty Cổ phần Truyền Thông Xu Hướng Số",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Truyền thông số · Kinh doanh",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Truyền thông số","Bán hàng","Digital Marketing"],
+        achievements:["Đang cập nhật"],
+        email:"member4@hsga.vn", website:""
+      },
+      {
+        id:5, initials:"NQTh", name:"Nguyễn Quang Thiện", phone:"0900000005",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"T&C Logistics Co., Ltd",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Logistics · Lãnh đạo doanh nghiệp",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Logistics","Lãnh đạo doanh nghiệp","Vận tải"],
+        achievements:["Đang cập nhật"],
+        email:"member5@hsga.vn", website:""
+      },
+      {
+        id:6, initials:"LHMH", name:"Lê Hoàng Mỹ Hạnh", phone:"0900000006",avatar:"avatars/0900000006.jpg",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"Công ty Green Communications",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Truyền thông xanh · Phát triển bền vững",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Truyền thông","ESG","Phát triển bền vững"],
+        achievements:["Đang cập nhật"],
+        email:"member6@hsga.vn", website:""
+      },
+      {
+        id:7, initials:"NTHT", name:"Nguyễn Thị Hồng Thanh", phone:"0900000007",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"Công ty TNHH DV Truyền thông và Sự kiện Sao Vàng",
+        cohort:"Cựu học viên MBA Khóa 11",
+        tagline:"Sự kiện · Truyền thông",
+        bio:"Đang cập nhật.",
+        education:["Cựu học viên MBA Khóa 11 — Đại học Hoa Sen"],
+        expertise:["Tổ chức sự kiện","Truyền thông","Quản lý dịch vụ"],
+        achievements:["Đang cập nhật"],
+        email:"member7@hsga.vn", website:""
+      },
+      {
+        id:8, initials:"VMP", name:"Võ Minh Phụng", phone:"0909713488",
+        role:"Thành viên BCN", position:"Marketing Manager",
+        organization:"Freelance",
+        cohort:"Học viên MBA Khóa 20",
+        tagline:"Marketing · Tự do",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
+        expertise:["Digital Marketing","Brand","Content"],
+        achievements:["Đang cập nhật"],
+        email:"member8@hsga.vn", website:""
+      },
+      {
+        id:9, initials:"NTM", name:"Nguyễn Thị Mạnh", phone:"0900000009",
+        role:"Thành viên BCN", position:"Đại diện văn phòng",
+        organization:"VINASA — Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Công nghệ · Hiệp hội",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["CNTT","Quan hệ hiệp hội","Phần mềm"],
+        achievements:["Đang cập nhật"],
+        email:"member9@hsga.vn", website:""
+      },
+      {
+        id:10, initials:"TTM", name:"Trương Trúc Mai", phone:"0900000010",
+        role:"Thành viên BCN", position:"Business Project Development Manager",
+        organization:"CTCP Văn hóa Sách Sài Gòn / Zenbooks — Tập đoàn Thiên Long",
+        cohort:"Học viên MBA Khóa 17",
+        tagline:"Xuất bản · Phát triển dự án",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 17 — Đại học Hoa Sen"],
+        expertise:["Xuất bản","Phát triển dự án","Văn hóa đọc"],
+        achievements:["Đang cập nhật"],
+        email:"member10@hsga.vn", website:""
+      },
+      {
+        id:11, initials:"NTTN", name:"Nguyễn Thị Tuyết Nhung", phone:"0938835512",
+        role:"Thành viên BCN", position:"Marketing Lead",
+        organization:"Nexus Sport Event",
+        cohort:"MBA Khóa 19",
+        tagline:"Marketing · Thể thao",
+        bio:"Đang cập nhật.",
+        education:["MBA Khóa 19 — Đại học Hoa Sen"],
+        expertise:["Marketing","Tổ chức sự kiện thể thao"],
+        achievements:["Đang cập nhật"],
+        email:"member11@hsga.vn", website:""
+      },
+      {
+        id:12, initials:"ĐQH", name:"Đậu Quốc Hưng", phone:"0900000012",
+        role:"Thành viên BCN", position:"Phó Ban Nghiên cứu & Phát triển, Phòng Marketing",
+        organization:"Tổng Công ty Tân Cảng Sài Gòn",
+        cohort:"Cựu học viên MBA Khóa 5",
+        tagline:"R&D · Marketing",
+        bio:"Đang cập nhật.",
+        education:["Cựu học viên MBA Khóa 5 — Đại học Hoa Sen"],
+        expertise:["R&D","Marketing","Logistics"],
+        achievements:["Đang cập nhật"],
+        email:"member12@hsga.vn", website:""
+      },
+      {
+        id:13, initials:"TTTD", name:"Trần Thị Thùy Dung", phone:"0399908464",
+        role:"Thành viên BCN", position:"Chuyên viên Chăm sóc — Trải nghiệm học viên",
+        organization:"Viện Sau đại học & Lãnh đạo — Trường Đại học Hoa Sen",
+        cohort:"Học viên MBA Khóa 20",
+        tagline:"Giáo dục · Trải nghiệm học viên",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
+        expertise:["Trải nghiệm khách hàng","Giáo dục","Quản trị học viên"],
+        achievements:["Đang cập nhật"],
+        email:"member13@hsga.vn", website:""
+      }
+    ];
+
+    // ====== DỮ LIỆU 60 THÀNH VIÊN CỘNG ĐỒNG HSGA (từ form Learn & Connect) ======
+    const community = [
+    {
+        "initials": "NMT",
+        "name": "Nguyễn Minh Tuấn",
+        "phone": "0907953028",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA16",
+        "email": "tuannm5@vietabank.com.vn",
+        "position_org": "Giám đốc Khách hàng doanh nghiệp - Ngân hàng Việt Á",
+        "tier": "community"
+    },
+    {
+        "initials": "NN",
+        "name": "NGUYỄN NHÂM",
+        "phone": "0905782466",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA3",
+        "email": "nguyennham1708@gmail.com",
+        "position_org": "HRM + Indochina",
+        "tier": "community"
+    },
+    {
+        "initials": "LTHN",
+        "name": "Lê Thị Hồng Nhạn",
+        "phone": "0945279099",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA20",
+        "email": "nhan.lth00139@sinhvien.hoasen.edu.vn",
+        "position_org": "Chuyên viên Khoa Marketing - Truyền thông, trường Đại học Hoa Sen",
+        "tier": "community"
+    },
+    {
+        "initials": "HTTL",
+        "name": "Hà Thị Thuý Loan",
+        "phone": "0939539196",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA22",
+        "email": "loan.htt04143@sinhvien.hoasen.edu.vn",
+        "position_org": "Kinh doanh tự do",
+        "tier": "community"
+    },
+    {
+        "initials": "LKT",
+        "name": "Lê Kiều Trang",
+        "phone": "0898660779",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "trang.lk03291@sinhvien.hoasen.edu.vn",
+        "position_org": "Founder công ty Elythium",
+        "tier": "community"
+    },
+    {
+        "initials": "NTNT",
+        "name": "Nguyễn Thị Ngọc Thuần",
+        "phone": "0931114313",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA19",
+        "email": "thuanntn1989@gmail.com",
+        "position_org": "Chuyên viên cấp cao vận hành ứng dụng SACOMBANK",
+        "tier": "community"
+    },
+    {
+        "initials": "LLAT",
+        "name": "Lê Lâm Anh Thư",
+        "phone": "0911552268",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA19",
+        "email": "lelamanhthw@gmail.com",
+        "position_org": "Marketing Executive",
+        "tier": "community"
+    },
+    {
+        "initials": "DTCT",
+        "name": "Đặng Thị Cẩm Thúy",
+        "phone": "0357801155",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "BMA19",
+        "email": "thuy.dtc03456@sinhvien.hoasen.edu.vn",
+        "position_org": "Trợ lý + Pharmacity",
+        "tier": "community"
+    },
+    {
+        "initials": "TTTT",
+        "name": "Trần Thị Thanh Tâm",
+        "phone": "0967384302",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA19",
+        "email": "Thanhtamsh2511@gmail.com",
+        "position_org": "Quản lý - CÔNG TY TNHH NHA KHOA LÊ THÀNH TÂM",
+        "tier": "community"
+    },
+    {
+        "initials": "LTA",
+        "name": "LÊ THỊ ÁNH",
+        "phone": "0934560318",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA19",
+        "email": "anh.lt03485@sinhvien.hoasen.edu.vn",
+        "position_org": "Director of sales + Radisson Resort Phan Thiet",
+        "tier": "community"
+    },
+    {
+        "initials": "TTL",
+        "name": "Trần Thùy Liên",
+        "phone": "0834884811",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA18",
+        "email": "thuylien.infor@gmail.com",
+        "position_org": "Filmcity Prod",
+        "tier": "community"
+    },
+    {
+        "initials": "BMG",
+        "name": "Bùi Mạnh Giỏi",
+        "phone": "0777659512",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MAE16",
+        "email": "gioiielts@gmail.com",
+        "position_org": "Giáo viên IELTS, GioiIELTS",
+        "tier": "community"
+    },
+    {
+        "initials": "NPT",
+        "name": "Nguyễn Phương Thảo",
+        "phone": "0902982087",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA21",
+        "email": "emily7849@gmail.com",
+        "position_org": "Marketing Manager - LiLo Studio",
+        "tier": "community"
+    },
+    {
+        "initials": "MQV",
+        "name": "Mai Quang Vinh",
+        "phone": "0777781348",
+        "role": "Học hỏi và kết nối",
+        "role_raw": "Học hỏi và kết nối",
+        "cohort": "—",
+        "email": "maiquangvinh.ks@gmail.com",
+        "position_org": "Digital Marketing Leader + Công Ty TNHH Thú Cưng Việt Nam (The Pet Việt Nam)",
+        "tier": "community"
+    },
+    {
+        "initials": "HNL",
+        "name": "Huỳnh Ngả Linh",
+        "phone": "0903002038",
+        "role": "Người đi làm",
+        "role_raw": "Người đi làm",
+        "cohort": "—",
+        "email": "phoebe_wong_young@yahoo.com",
+        "position_org": "Giáo viên tiếng Anh tự do",
+        "tier": "community"
+    },
+    {
+        "initials": "NXC",
+        "name": "Nguyễn Xuân Chiến",
+        "phone": "0359652658",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "chien2242001nguyen@gmail.com",
+        "position_org": "Admin E-Commerce + The Pet Vietnam",
+        "tier": "community"
+    },
+    {
+        "initials": "CSD",
+        "name": "Chu Sùng Duy",
+        "phone": "0776612444",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "duy.cs22400655@sinhvien.hoasen.edu.vn",
+        "position_org": "Trợ lý giám đốc CÔNG TY TNHH 9 HOLDING",
+        "tier": "community"
+    },
+    {
+        "initials": "HDLC",
+        "name": "Hà Diệu Linh Chi + Thúy Vy",
+        "phone": "0912111774",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "MBA19",
+        "email": "chihadieulinh1311@gmail.com",
+        "position_org": "Chuyên viên Marketing + The Pet Vietnam",
+        "tier": "community"
+    },
+    {
+        "initials": "PMA",
+        "name": "Phạm Mai Anh",
+        "phone": "0869136737",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA20",
+        "email": "pmaianh64@gmail.com",
+        "position_org": "Social & Affiliate + Công Ty Welcome ENM Việt Nam",
+        "tier": "community"
+    },
+    {
+        "initials": "DTHA",
+        "name": "Dang Thuy Hoang Anh",
+        "phone": "0938989567",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MAEK15",
+        "email": "dangthuyhoanganh@gmail.com",
+        "position_org": "Thcs Mac Dinh Ch8",
+        "tier": "community"
+    },
+    {
+        "initials": "PDTN",
+        "name": "Phan Đoàn Thảo Nguyên",
+        "phone": "0909770206",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MAE15",
+        "email": "junep2707@gmail.com",
+        "position_org": "Giáo viên tiếng Anh + Giám đốc cty phần mềm Dolphin",
+        "tier": "community"
+    },
+    {
+        "initials": "NHBT",
+        "name": "Nguyễn Hà Bảo Trân",
+        "phone": "0936255428",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "habaotran.nguyen3105@gmail.com",
+        "position_org": "Logistics Consultant + Vantage Logistics",
+        "tier": "community"
+    },
+    {
+        "initials": "TPKQ",
+        "name": "Trần Phan Khánh Quỳnh",
+        "phone": "0933135544",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "K22",
+        "email": "tranquynhbc@gmail.com",
+        "position_org": "NA",
+        "tier": "community"
+    },
+    {
+        "initials": "DTTD",
+        "name": "Đoàn Thị Thuý Duyên",
+        "phone": "c024",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA 20",
+        "email": "duyen2000@gmail.com",
+        "position_org": "Chuyên viên + Long Châu",
+        "tier": "community"
+    },
+    {
+        "initials": "MTM",
+        "name": "Mai Trà My",
+        "phone": "0327627555",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA16",
+        "email": "jennifermai0706@gmail.com",
+        "position_org": "Head of HR & Operations Management  + Welcome GROUP Vietnam",
+        "tier": "community"
+    },
+    {
+        "initials": "HNH",
+        "name": "Huỳnh Ngọc hiếu",
+        "phone": "0933222189",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA15",
+        "email": "hieuhuynh12@gmail.com",
+        "position_org": "Phó Tổng Giám đốc Công ty Cổ phần Thương mại Dịch vụ Hiệp Tân (HTC)",
+        "tier": "community"
+    },
+    {
+        "initials": "NNYN",
+        "name": "Nguyễn Ngọc Yến Nhi",
+        "phone": "0842639398",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA17",
+        "email": "nhi.nny00278@sinhvien.hoasen.edu.vn",
+        "position_org": "Trợ lý COO - Công ty TNHH Ocean Essence",
+        "tier": "community"
+    },
+    {
+        "initials": "LVD",
+        "name": "Lại Văn Đỏ",
+        "phone": "0988080408",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA16",
+        "email": "laivando@gmail.com",
+        "position_org": "Giám đốc Trung tâm Vận hành mạng - NetNam",
+        "tier": "community"
+    },
+    {
+        "initials": "TVAT",
+        "name": "Thái Vũ Anh Tuấn",
+        "phone": "0989111493",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MAE11",
+        "email": "thaivuanhtuan@gmail.com",
+        "position_org": "Trưởng Bộ Phận Đào Tạo, Viện Đào Tạo Quốc Tế, Học Viện Hàng Không Việt Nam",
+        "tier": "community"
+    },
+    {
+        "initials": "NVH",
+        "name": "NGUYỄN VĂN HẢI",
+        "phone": "0944317798",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA16",
+        "email": "wenhai98@gmail.com",
+        "position_org": "Tư vấn tài chính + làm tự do",
+        "tier": "community"
+    },
+    {
+        "initials": "NNK",
+        "name": "Nguyễn Nguyên Khoa",
+        "phone": "0348731763",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MA01",
+        "email": "khoa.nn1206@gmail.com",
+        "position_org": "Business Development Manager - Potential Technology Ltd",
+        "tier": "community"
+    },
+    {
+        "initials": "MTD",
+        "name": "Mã thanh danh",
+        "phone": "0913154400",
+        "role": "Dba",
+        "role_raw": "Dba",
+        "cohort": "Mba20",
+        "email": "Savinagroup@gmail.com",
+        "position_org": "Kido",
+        "tier": "community"
+    },
+    {
+        "initials": "LKN",
+        "name": "Lê Kiều Ngân",
+        "phone": "0834767313",
+        "role": "Nhân viên văn phòng",
+        "role_raw": "Nhân viên văn phòng",
+        "cohort": "—",
+        "email": "kieungan.le.vn@gmail.com",
+        "position_org": "Nhân viên Marketing + Công ty Turn Green",
+        "tier": "community"
+    },
+    {
+        "initials": "NTT",
+        "name": "Nguyễn Thanh Trung",
+        "phone": "0944126026",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "thanhtrungn1111@gmail.com",
+        "position_org": "marketing + Công ty Turn Green Holding",
+        "tier": "community"
+    },
+    {
+        "initials": "NTN",
+        "name": "Nguyễn Thanh Ngân",
+        "phone": "0905742211",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA16",
+        "email": "ngan.nt2211@gmail.com",
+        "position_org": "Marketing Manager - Athen Event Company",
+        "tier": "community"
+    },
+    {
+        "initials": "TAC",
+        "name": "Trịnh Anh Cường",
+        "phone": "0794283890",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "cuong.ta14584@sinhvien.hoasen.edu.vn",
+        "position_org": "Sinh viên - Đại học Hoa Sen",
+        "tier": "community"
+    },
+    {
+        "initials": "NVN",
+        "name": "Nguyễn Văn Nam",
+        "phone": "0933713363",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA 15",
+        "email": "nguyenvannam8542@gmail.com",
+        "position_org": "Nhân Viên",
+        "tier": "community"
+    },
+    {
+        "initials": "DVN",
+        "name": "Đăng Văn Nghĩa",
+        "phone": "0357388379",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "daniel@hrk-group.com",
+        "position_org": "Marketing Lead",
+        "tier": "community"
+    },
+    {
+        "initials": "VTH",
+        "name": "Vũ Trường Hải",
+        "phone": "0906990460",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "K19",
+        "email": "truonghaivn07@gmail.com",
+        "position_org": "Quản lý",
+        "tier": "community"
+    },
+    {
+        "initials": "DDQ",
+        "name": "Đặng Đức Quỳnh",
+        "phone": "0919079969",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "—",
+        "email": "quynhcongthuong.edu@gmail.com",
+        "position_org": "Chuyên viên, Trường Đại học Công Thương TP. Hồ Chí Minh",
+        "tier": "community"
+    },
+    {
+        "initials": "NDH",
+        "name": "Nguyễn Đắc Hoàng",
+        "phone": "0937011776",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "hoang.nd00532@sinhvien.hoasen.edu.vn",
+        "position_org": "Chưa có",
+        "tier": "community"
+    },
+    {
+        "initials": "LTD",
+        "name": "Lê Thanh Đôn",
+        "phone": "035672909",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "thanhdon263@gmail.com",
+        "position_org": "Tự do",
+        "tier": "community"
+    },
+    {
+        "initials": "TT",
+        "name": "Trung Thu",
+        "phone": "0901135206",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "trungthu.uel@gmail.com",
+        "position_org": "Viet Mental Health",
+        "tier": "community"
+    },
+    {
+        "initials": "VDB",
+        "name": "Võ Duy Bình",
+        "phone": "0981316779",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "Binh.vd01500@sinhvien.hoasen.edu.vn",
+        "position_org": "Freelance",
+        "tier": "community"
+    },
+    {
+        "initials": "LTN",
+        "name": "Lâm Thanh Nghĩa",
+        "phone": "0868415452",
+        "role": "Giảng viên",
+        "role_raw": "Giảng viên",
+        "cohort": "—",
+        "email": "lamthanhnghia65@gmail.com",
+        "position_org": "Giảng viên",
+        "tier": "community"
+    },
+    {
+        "initials": "LMB",
+        "name": "LÊ MINH BẮC",
+        "phone": "0909011164",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "minhbac.le.68@gmail.com",
+        "position_org": "Phó giám đốc phụ trách kinh doanh + Cty TNHH TM DV DL An Thái",
+        "tier": "community"
+    },
+    {
+        "initials": "TNC",
+        "name": "Trương Ngọc Cầm",
+        "phone": "c047",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": ".",
+        "email": "cam.tn14916@sinhvien.hoasen.edu.vn",
+        "position_org": ".",
+        "tier": "community"
+    },
+    {
+        "initials": "LTM",
+        "name": "Lê Thị Mỹ",
+        "phone": "0907034011",
+        "role": "Cựu học viên Thạc sĩ",
+        "role_raw": "Cựu học viên Thạc sĩ",
+        "cohort": "MBA11",
+        "email": "MY.LT40355@sinhvien.hoasen.edu.vn",
+        "position_org": "Bệnh viện Phục hồi chức năng - Điều trị bệnh nghề nghiệp",
+        "tier": "community"
+    },
+    {
+        "initials": "NVC",
+        "name": "Nguyễn Việt Cương",
+        "phone": "0934140985",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "hulahu88@gmail.com",
+        "position_org": "Uk",
+        "tier": "community"
+    },
+    {
+        "initials": "VPT",
+        "name": "Võ Phú Thịnh",
+        "phone": "0902392026",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "thinh.vp01055@sinhvien.hoasen.edu.vn",
+        "position_org": "hiện tại em là sinh viên của trường đại học Hoa sen",
+        "tier": "community"
+    },
+    {
+        "initials": "MNGK",
+        "name": "Mai Nguyễn Gia Khánh",
+        "phone": "0826550559",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "K23",
+        "email": "mainguyengiakhanh.k21cva@gmail.com",
+        "position_org": "Sinh viên Hoa Sen",
+        "tier": "community"
+    },
+    {
+        "initials": "NTTH",
+        "name": "Nguyễn Trung Thu Hiền",
+        "phone": "0373910512",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "hien.ntt02208@sinhvien.hoasen.edu.vn",
+        "position_org": "Sinh viên Đại học Hoa Sen",
+        "tier": "community"
+    },
+    {
+        "initials": "PNGM",
+        "name": "Phạm Ngọc Giáng Mi",
+        "phone": "0919101150",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MAE14",
+        "email": "mi.png01201@sinhvien.hoasen.edu.vn",
+        "position_org": "Giáo Viên tự do",
+        "tier": "community"
+    },
+    {
+        "initials": "NTQK",
+        "name": "Nguyễn Trường Quang Khôi",
+        "phone": "0814762862",
+        "role": "Sinh viên HSU",
+        "role_raw": "Sinh viên HSU đang theo học",
+        "cohort": "—",
+        "email": "kevin.khoinguyen@gmail.com",
+        "position_org": "CEO, cty KST Canada",
+        "tier": "community"
+    },
+    {
+        "initials": "BTN",
+        "name": "Bùi Thu Nga",
+        "phone": "0908078602",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "MBA21",
+        "email": "nga.bt03751@sinhvien.hoasen.edu.vn",
+        "position_org": "Trợ lý Chủ tịch HĐQT",
+        "tier": "community"
+    },
+    {
+        "initials": "HDT",
+        "name": "HỒ ĐỨC THỊNH",
+        "phone": "0823458379",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "—",
+        "email": "ducthinh29112016@gmail.com",
+        "position_org": "SALE + BI WATCH",
+        "tier": "community"
+    },
+    {
+        "initials": "TMH",
+        "name": "TRẦN MỸ HẠ",
+        "phone": "0326463426",
+        "role": "Học viên Thạc sĩ",
+        "role_raw": "Học viên Thạc sĩ",
+        "cohort": "—",
+        "email": "tranmyha2107@gmail.com",
+        "position_org": "MANAGER + BI WATCH",
+        "tier": "community"
+    },
+    {
+        "initials": "NH",
+        "name": "Nguyễn Hùng",
+        "phone": "0898049488",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "nguyenthaihung91@gmail.com",
+        "position_org": "Phòng Marketing Capella",
+        "tier": "community"
+    },
+    {
+        "initials": "PMH",
+        "name": "Phạm Minh Hiếu",
+        "phone": "0326409131",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "phmhieu8@gmail.com",
+        "position_org": "Giáo viên IELTS, ZIM Academy",
+        "tier": "community"
+    },
+    {
+        "initials": "TVP",
+        "name": "Trịnh Vĩnh Phúc",
+        "phone": "0981845262",
+        "role": "Người quan tâm",
+        "role_raw": "Người quan tâm chương trình Thạc sĩ",
+        "cohort": "—",
+        "email": "phuc.tv@concuuden.art",
+        "position_org": "Giám đốc Công ty Truyền thông Con Cừu Đen",
+        "tier": "community"
+    }
+];
+
+    // Positions auto-generated (tránh chồng BCN + chồng nhau)
+    const communityPositions = [{"left": "63.05%", "top": "6.39%"}, {"left": "86.70%", "top": "12.07%"}, {"left": "5.70%", "top": "22.35%"}, {"left": "64.02%", "top": "54.13%"}, {"left": "78.95%", "top": "4.69%"}, {"left": "35.05%", "top": "18.37%"}, {"left": "82.52%", "top": "59.52%"}, {"left": "78.74%", "top": "71.09%"}, {"left": "53.39%", "top": "93.44%"}, {"left": "38.63%", "top": "54.78%"}, {"left": "69.14%", "top": "8.30%"}, {"left": "24.54%", "top": "30.66%"}, {"left": "10.68%", "top": "25.47%"}, {"left": "28.20%", "top": "90.09%"}, {"left": "19.23%", "top": "71.04%"}, {"left": "18.50%", "top": "38.93%"}, {"left": "95.81%", "top": "62.85%"}, {"left": "55.33%", "top": "66.95%"}, {"left": "24.65%", "top": "7.04%"}, {"left": "22.96%", "top": "90.67%"}, {"left": "55.74%", "top": "28.22%"}, {"left": "57.91%", "top": "86.53%"}, {"left": "40.59%", "top": "24.23%"}, {"left": "96.56%", "top": "50.87%"}, {"left": "13.47%", "top": "61.70%"}, {"left": "77.33%", "top": "42.85%"}, {"left": "94.08%", "top": "83.13%"}, {"left": "4.29%", "top": "70.27%"}, {"left": "28.18%", "top": "62.94%"}, {"left": "13.65%", "top": "44.01%"}, {"left": "45.67%", "top": "91.67%"}, {"left": "85.17%", "top": "28.27%"}, {"left": "50.05%", "top": "20.49%"}, {"left": "88.61%", "top": "84.02%"}, {"left": "60.20%", "top": "18.12%"}, {"left": "5.04%", "top": "89.40%"}, {"left": "31.99%", "top": "9.41%"}, {"left": "85.37%", "top": "91.04%"}, {"left": "44.21%", "top": "51.61%"}, {"left": "23.26%", "top": "16.24%"}, {"left": "90.75%", "top": "56.52%"}, {"left": "95.30%", "top": "13.13%"}, {"left": "40.89%", "top": "35.25%"}, {"left": "21.01%", "top": "45.28%"}, {"left": "54.71%", "top": "8.74%"}, {"left": "38.68%", "top": "94.56%"}, {"left": "28.03%", "top": "76.08%"}, {"left": "45.79%", "top": "42.93%"}, {"left": "92.79%", "top": "95.49%"}, {"left": "17.70%", "top": "31.33%"}, {"left": "8.56%", "top": "57.73%"}, {"left": "50.27%", "top": "82.39%"}, {"left": "17.95%", "top": "92.31%"}, {"left": "58.84%", "top": "60.96%"}, {"left": "25.55%", "top": "40.43%"}, {"left": "32.80%", "top": "73.13%"}, {"left": "60.45%", "top": "94.74%"}, {"left": "79.67%", "top": "31.58%"}, {"left": "65.29%", "top": "90.30%"}, {"left": "70.36%", "top": "22.78%"}];
+
+    // Gán id cho community (tiếp nối BCN ids 1-13)
+    community.forEach((m, i) => { m.id = 100 + i; m.isChair = false; m.tier = 'community'; });
+
+    // ====== STAR FIELD — 13 NGÔI SAO ======
+    const constellation = document.getElementById('constellation');
+    const positions = [
+      { top: '8%',  left: '45%' },
+      { top: '15%', left: '15%' },
+      { top: '18%', left: '78%' },
+      { top: '32%', left: '32%' },
+      { top: '35%', left: '62%' },
+      { top: '38%', left: '5%'  },
+      { top: '40%', left: '88%' },
+      { top: '55%', left: '20%' },
+      { top: '58%', left: '50%' },
+      { top: '60%', left: '75%' },
+      { top: '78%', left: '12%' },
+      { top: '80%', left: '42%' },
+      { top: '82%', left: '70%' }
+    ];
+
+    // Render 13 BCN stars (full size, bright)
+    members.forEach((m, i) => {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = positions[i].top;
+      star.style.left = positions[i].left;
+      star.style.animationDelay = `${i * 0.6}s, ${i * 0.4}s`;
+      // All 13 BCN stars same size (80px) — chairman distinguished by badge only
+      const starContent = m.avatar
+          ? `<img class="star-photo" src="./${m.avatar}" alt="${m.name}" />`
+          : `<img class="star-logo" src="./hsu-lotus-white.png" alt="Hoa Sen" />`;
+      star.innerHTML = `
+        ${starContent}
+        ${m.isChair ? '<span class="star-role">★ CHỦ NHIỆM</span>' : ''}
+        <span class="star-tooltip">${m.name} · ${m.cohort}</span>
+      `;
+      star.onclick = () => openModal(m.id);
+      constellation.appendChild(star);
+    });
+
+    // Render 59 community stars (smaller, dimmer)
+    community.forEach((m, i) => {
+      const star = document.createElement('div');
+      star.className = 'star community';
+      star.style.top = communityPositions[i].top;
+      star.style.left = communityPositions[i].left;
+      star.style.animationDelay = `${(i * 0.25) % 8}s, ${(i * 0.18) % 5}s`;
+      star.innerHTML = `
+        <img class="star-logo" src="./hsu-lotus-white.png" alt="Hoa Sen" />
+        <span class="star-tooltip">${m.name} · ${m.cohort}</span>
+      `;
+      star.onclick = () => openCommunityModal(m.id);
+      constellation.appendChild(star);
+    });
+
+    // ====== MEMBER GRID ======
+    const grid = document.getElementById('membersGrid');
+    members.forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'member-card' + (m.isChair ? ' chairman' : '');
+      card.onclick = () => openModal(m.id);
+      card.innerHTML = `
+        ${m.avatar ? `<div class="member-avatar" style="${m.isChair ? 'margin-top: 12px;' : ''}background:none;border:2px solid rgba(0,159,232,0.4);overflow:hidden;"><img src="./${m.avatar}" alt="${m.name}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>` : `<div class="member-avatar" style="${m.isChair ? 'margin-top: 12px;' : ''}"><img src="./hsu-lotus-white.png" alt="HSU" style="width:48px;height:auto;opacity:0.8;filter:drop-shadow(0 0 8px rgba(0,159,232,0.5));" /></div>`}
+        <div class="member-name">${m.name}</div>
+        <div class="member-role">${m.position}</div>
+        <div class="member-org">${m.organization}</div>
+        <div class="member-cohort">${m.cohort} · ${m.role}</div>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Community grid
+    const cGrid = document.getElementById('communityGrid');
+    community.forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'community-card';
+      card.onclick = () => openCommunityModal(m.id);
+      card.innerHTML = `
+        <div class="c-avatar"><img src="./hsu-lotus-white.png" alt="HSU" style="width:32px;height:auto;opacity:0.75;filter:drop-shadow(0 0 4px rgba(0,159,232,0.4));" /></div>
+        <div class="c-name">${m.name}</div>
+        <div class="c-role">${m.role}</div>
+        <div class="c-cohort">${m.cohort}</div>
+      `;
+      cGrid.appendChild(card);
+    });
+
+    // ====== MODAL ======
+    function openModal(id) {
+      const m = members.find(x => x.id === id);
+      if (!m) return;
+      const personalUrl = `./${m.phone}.html`;
+
+      document.getElementById('modalContent').innerHTML = `
+        <div class="modal-header">
+          ${m.avatar ? `<div class="modal-avatar ${m.isChair ? 'chair' : ''}" style="background:none;border:2px solid rgba(0,159,232,0.5);overflow:hidden;"><img src="./${m.avatar}" alt="${m.name}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>` : `<div class="modal-avatar ${m.isChair ? 'chair' : ''}">${m.initials}</div>`}
+          <div class="modal-title">
+            ${m.isChair ? '<div class="chair-badge">★ Chủ nhiệm HSGA</div>' : ''}
+            <h2>${m.name}</h2>
+            <div class="role">${m.position}</div>
+            <div class="tagline">${m.organization}</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Tiểu sử</div>
+          <div class="field-content">${m.bio}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Liên kết với HSU</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="lbl">Khóa học tại HSU</div><div class="val">${m.cohort}</div></div>
+            <div class="info-item"><div class="lbl">Vai trò trong BCN</div><div class="val">${m.role}</div></div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Học vấn</div>
+          <div class="field-content">${m.education.map(e => `<div class="bullet">${e}</div>`).join('')}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Hiện tại</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="lbl">Chức danh</div><div class="val">${m.position}</div></div>
+            <div class="info-item"><div class="lbl">Tổ chức</div><div class="val">${m.organization}</div></div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Lĩnh vực chuyên môn</div>
+          <div class="field-content">${m.expertise.map(e => `<div class="bullet">${e}</div>`).join('')}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Thành tựu nổi bật</div>
+          <div class="field-content">${m.achievements.map(a => `<div class="bullet">${a}</div>`).join('')}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Liên hệ</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="lbl">Email</div><div class="val">${m.email}</div></div>
+            <div class="info-item"><div class="lbl">Website</div><div class="val">${m.website || 'Đang cập nhật'}</div></div>
+          </div>
+        </div>
+
+        <a href="${personalUrl}" class="personal-link-btn">
+          Xem trang cá nhân đầy đủ →
+        </a>
+        <div class="personal-link-url">hsga.vn/${m.phone}</div>
+      `;
+      document.getElementById('modalBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+
+    function openCommunityModal(id) {
+      const m = community.find(x => x.id === id);
+      if (!m) return;
+      document.getElementById('modalContent').innerHTML = `
+        <div class="modal-header">
+          <div class="modal-avatar">${m.initials}</div>
+          <div class="modal-title">
+            <div class="chair-badge" style="background:rgba(255, 255, 255, 0.15); color:var(--zen-copper); border:1px solid var(--zen-border);">Thành viên Cộng đồng HSGA</div>
+            <h2>${m.name}</h2>
+            <div class="role">${m.role}</div>
+            <div class="tagline">${m.position_org || 'Đang cập nhật thông tin công tác'}</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Liên kết với HSU</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="lbl">Khóa học tại HSU</div><div class="val">${m.cohort}</div></div>
+            <div class="info-item"><div class="lbl">Vai trò</div><div class="val">${m.role}</div></div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Vị trí công tác hiện tại</div>
+          <div class="field-content">${m.position_org || 'Đang cập nhật'}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Liên hệ</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="lbl">Email</div><div class="val">${m.email || 'Đang cập nhật'}</div></div>
+            <div class="info-item"><div class="lbl">Điện thoại</div><div class="val">${m.phone && !m.phone.startsWith('c') ? m.phone : 'Đang cập nhật'}</div></div>
+          </div>
+        </div>
+
+        <div class="personal-link-url" style="margin-top: 2rem;">
+          ★ Hồ sơ hội viên cộng đồng · Nguồn: Form HSGA Learn & Connect
+        </div>
+      `;
+      document.getElementById('modalBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+      if (e.target.id === 'modalBackdrop') closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

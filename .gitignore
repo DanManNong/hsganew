@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+*.swp
+._*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Local artifacts
+*.log
+*.tmp
+
+# Sensitive / local-only
+.env
+.env.local
+
+# File Excel/CSV nguồn chứa dữ liệu cá nhân hội viên — KHÔNG commit lên public repo
+*.xlsx
+*.xls
+*.csv
+[VSĐH*
+
+# Ghi chú nội bộ có thể chứa SĐT/email riêng
+nhac-viec-*.md
+HSGA-HUONG-DAN.md
+
+# Tài liệu brand guideline nội bộ (file lớn, không cần deploy)
+HSU-Guideline-*.pdf
+
+# Ảnh chân dung gốc (web chỉ dùng ảnh trong avatars/)
+Anh-*.jpg
+Anh-*.jpeg
+Anh-*.png
+
+# Script build nội bộ
+_*.py

@@ -1,0 +1,12 @@
+# Vercel không cần các file nội bộ này (không ảnh hưởng gì nếu đã trong .gitignore,
+# nhưng để đây phòng khi commit lỡ kéo vào)
+*.xlsx
+*.xls
+*.csv
+HSGA-HUONG-DAN.md
+nhac-viec-*.md
+HSU-Guideline-*.pdf
+Anh-*.jpg
+Anh-*.jpeg
+Anh-*.png
+_*.py
