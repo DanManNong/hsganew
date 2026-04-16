@@ -125,7 +125,7 @@
     text-transform: uppercase;
   }
   .click-hint {
-    font-size: 8px;
+    font-size: clamp(13.5px, 2.7vw, 16.5px);
     color: rgb(148, 163, 184); /* slate-400 */
     text-align: center;
     letter-spacing: 0.3em;
@@ -714,7 +714,7 @@
   }
 
   .section-title {
-    font-size: 10px;
+    font-size: clamp(13.5px, 2.7vw, 16.5px);
     font-weight: 600;
     letter-spacing: 0.5em;
     text-indent: 0.5em;
@@ -726,7 +726,7 @@
     border-bottom: 1px solid var(--zen-border);
   }
   .section-sub {
-    font-size: 8px;
+    font-size: clamp(13.5px, 2.7vw, 16.5px);
     color: rgba(255,255,255,0.4);
     text-align: center;
     letter-spacing: 0.3em;
@@ -950,8 +950,8 @@
     .modal-header { flex-direction: column; text-align: center; gap: 18px; }
     .info-grid { grid-template-columns: 1fr; }
     .slogan-copper { letter-spacing: 0.35em; text-indent: 0.35em; }
-    .section-title { font-size: 16px; letter-spacing: 0.2em; }
-    .section-sub { font-size: 8px; letter-spacing: 0.06em; white-space: nowrap; }
+    .section-title { font-size: 13px; letter-spacing: 0.25em; white-space: nowrap; }
+    .section-sub { font-size: 8.5px; letter-spacing: 0.04em; white-space: nowrap; }
     .member-card { padding: 2rem 1rem 1.5rem; }
     .member-card .member-name { font-size: 12px; min-height: 32px; }
     .member-card .member-role { font-size: 7.5px; }
@@ -968,8 +968,8 @@
     .lang-section { padding: 12px 4%; gap: 8px; }
     main { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
     footer { padding: 2rem 1rem !important; }
-    /* Z08.3 — lề 5% mỗi bên cho constellation trên mobile */
-    .constellation-wrap { padding: 0 5%; }
+    /* Z08.3 — lề 1% mỗi bên cho constellation trên mobile */
+    .constellation-wrap { padding: 0 1%; }
     .star::after { inset: -16px; }
     .star::before { inset: -10px; }
     /* Subtitle: mỗi dòng fit 1 hàng trên mobile */
@@ -979,10 +979,10 @@
       text-indent: 0.08em;
       white-space: nowrap;
     }
-    /* Click hint 1 hàng trên mobile */
+    /* Click hint 1 hàng trên mobile — ép 1 hàng với size nhỏ vì 58 ký tự */
     .click-hint {
-      font-size: 7px;
-      letter-spacing: 0.03em;
+      font-size: 8px;
+      letter-spacing: 0;
       white-space: nowrap;
     }
   }
@@ -990,8 +990,9 @@
     .name-modern { font-size: clamp(2.4rem, 14vw, 4rem); letter-spacing: 0.15em; }
     .slogan-copper { font-size: 8px; letter-spacing: 0.25em; text-indent: 0.25em; }
     .subtitle-zen { font-size: 9.5px; letter-spacing: 0.04em; text-indent: 0; }
-    .click-hint { font-size: 6.5px; letter-spacing: 0; }
-    .section-sub { font-size: 7.5px; letter-spacing: 0.03em; }
+    .click-hint { font-size: 7px; letter-spacing: 0; }
+    .section-title { font-size: 11px; letter-spacing: 0.2em; }
+    .section-sub { font-size: 7.5px; letter-spacing: 0; }
     .member-avatar { width: 70px; height: 70px; }
     .star { width: 60px; height: 60px; }
     .star.community { width: 54px; height: 54px; } /* 90% của BCN 60px */
@@ -1034,17 +1035,7 @@
     <!-- Mobile: gộp dòng 1+2 → 3 dòng tổng -->
     <p class="subtitle-zen mb-3 stagger md:hidden" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni · Câu lạc bộ Hội viên</p>
     <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s; opacity:0.5">Nơi những vì sao Hoa Sen hội tụ</p>
-    <p class="subtitle-zen mb-10 stagger" style="animation-delay: 0.55s; opacity:0.4">★ Ban chủ nhiệm và Hội viên Cộng đồng ★</p>
-
-    <!-- SEARCH BOX (Z04) -->
-    <div class="search-box stagger" style="animation-delay: 0.58s">
-      <div class="search-wrap">
-        <i class="fas fa-search search-icon"></i>
-        <input type="search" id="memberSearch" class="search-input" placeholder="Tìm theo tên, số điện thoại, khóa..." autocomplete="off" />
-        <button type="button" class="search-clear" id="searchClear" title="Xoá tìm kiếm" aria-label="Xoá tìm kiếm"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="search-result" id="searchResult"></div>
-    </div>
+    <p class="subtitle-zen mb-16 stagger" style="animation-delay: 0.55s; opacity:0.4">★ Ban chủ nhiệm và Hội viên Cộng đồng ★</p>
 
     <!-- CTA -->
     <div class="mb-10 stagger flex flex-col md:flex-row gap-4 justify-center items-center" style="animation-delay: 0.6s">
@@ -1056,6 +1047,16 @@
     <p class="click-hint mb-6 stagger" style="animation-delay: 0.7s">
       ◆ Click vào bất kỳ ngôi sao nào trong hội viên để khám phá ◆
     </p>
+
+    <!-- SEARCH BOX (Z04 — nằm dưới click hint) -->
+    <div class="search-box stagger" style="animation-delay: 0.75s">
+      <div class="search-wrap">
+        <i class="fas fa-search search-icon"></i>
+        <input type="search" id="memberSearch" class="search-input" placeholder="Tìm theo tên, số điện thoại, khóa..." autocomplete="off" />
+        <button type="button" class="search-clear" id="searchClear" title="Xoá tìm kiếm" aria-label="Xoá tìm kiếm"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="search-result" id="searchResult"></div>
+    </div>
 
     <!-- CONSTELLATION -->
     <div class="constellation-wrap stagger" style="animation-delay: 0.8s">
@@ -2336,7 +2337,7 @@
       const svg = document.getElementById('starLines');
       if (!svg) return;
       const SVG_NS = 'http://www.w3.org/2000/svg';
-      const MAX_ACTIVE = 4;
+      const MAX_ACTIVE = 10;
       const MIN_DIST = 80;
       const MAX_DIST = 320;
 
