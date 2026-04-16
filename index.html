@@ -36,11 +36,10 @@
   /* ====== STAGING BANNER — chỉ hiện trên URL tạm (preview), ẩn trên hsga.vn ====== */
   #stagingBanner {
     display: none;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 2000;
+    width: 100%;
+    flex-shrink: 0;
     background: linear-gradient(90deg, #ED1C24, #FF6B3D, #ED1C24);
     background-size: 200% 100%;
     animation: stagingShimmer 4s ease infinite;
@@ -2042,7 +2041,7 @@
       { top: '18%', left: '78%' },
       { top: '32%', left: '32%' },
       { top: '35%', left: '62%' },
-      { top: '38%', left: '5%'  },
+      { top: '50%', left: '50%' },  /* Lê Hoàng Mỹ Hạnh — giữa chòm sao */
       { top: '40%', left: '88%' },
       { top: '55%', left: '20%' },
       { top: '58%', left: '50%' },
