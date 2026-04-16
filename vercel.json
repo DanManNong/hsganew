@@ -6,7 +6,7 @@
     { "source": "/:phone(\\d{10,11})", "destination": "/:phone.html" }
   ],
   "redirects": [
-    { "source": "/hsga-club-v(\\d+)(\\.(\\d+))?", "destination": "/", "permanent": false }
+    { "source": "/hsga-club-:slug*", "destination": "/", "permanent": false }
   ],
   "headers": [
     {
