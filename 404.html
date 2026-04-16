@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Không tìm thấy hồ sơ · HSGA</title>
+<meta name="description" content="Không tìm thấy hồ sơ hội viên. Có thể số điện thoại bạn nhập chưa đăng ký trong hệ thống HSGA.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  :root {
+    --hsu-blue: #024DA1;
+    --hsu-cyan: #009FE8;
+    --hsu-red: #ED1C24;
+    --zen-bg: #0A0F1E;
+    --zen-copper: #C9A961;
+    --zen-border: rgba(255, 255, 255, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(ellipse at 50% 0%, #0D1A3A 0%, #050811 60%, #000000 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Nền sao lấp lánh nhẹ */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.5), transparent),
+      radial-gradient(1px 1px at 78% 32%, rgba(255,255,255,0.45), transparent),
+      radial-gradient(1px 1px at 48% 72%, rgba(0,159,232,0.55), transparent),
+      radial-gradient(1px 1px at 25% 86%, rgba(255,255,255,0.4), transparent),
+      radial-gradient(1px 1px at 88% 80%, rgba(0,159,232,0.45), transparent),
+      radial-gradient(1px 1px at 62% 12%, rgba(255,255,255,0.4), transparent);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 640px;
+    animation: fadeIn 0.9s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 159, 232, 0.35);
+    border-radius: 50%;
+    background: rgba(0, 159, 232, 0.05);
+  }
+  .logo img { width: 58%; height: auto; opacity: 0.85; }
+
+  .code {
+    font-size: clamp(4rem, 18vw, 9rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(110deg, #009FE8 0%, #60C8FF 40%, #ffffff 50%, #60C8FF 60%, #009FE8 100%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s ease infinite;
+    filter: drop-shadow(0 6px 30px rgba(0, 159, 232, 0.35));
+  }
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50%     { background-position: 100% 50%; }
+  }
+
+  .divider {
+    width: 42px;
+    height: 1px;
+    background: rgba(0, 159, 232, 0.5);
+    margin: 1.25rem auto 2rem;
+  }
+
+  h1 {
+    font-size: clamp(14px, 3.2vw, 18px);
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    color: #fff;
+  }
+
+  .message {
+    font-size: clamp(13px, 2.4vw, 15px);
+    font-weight: 300;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  .message strong {
+    color: var(--hsu-cyan);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .hint {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--zen-copper);
+    padding: 10px 20px;
+    border: 1px solid var(--zen-border);
+    margin-bottom: 2.25rem;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid rgba(0, 159, 232, 0.5);
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: 0.3s;
+    background: rgba(0, 159, 232, 0.08);
+  }
+  .btn:hover {
+    background: var(--hsu-cyan);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 159, 232, 0.35);
+  }
+  .btn.secondary {
+    border-color: var(--zen-border);
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+  }
+  .btn.secondary:hover {
+    border-color: var(--zen-copper);
+    background: rgba(255,255,255,0.04);
+    color: var(--zen-copper);
+    box-shadow: none;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 7px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    z-index: 1;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .logo { width: 96px; height: 96px; margin-bottom: 1.25rem; }
+    .code { margin-bottom: 0.5rem; }
+    h1 { letter-spacing: 0.22em; }
+    .message { font-size: 12px; line-height: 1.75; }
+    .btn { padding: 12px 18px; font-size: 9px; letter-spacing: 0.22em; }
+    .actions { gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="logo">
+    <img src="./hsu-lotus-white.png" alt="HSGA · Hoa Sen" />
+  </div>
+
+  <div class="code">404</div>
+  <div class="divider"></div>
+
+  <h1>Không tìm thấy hồ sơ</h1>
+
+  <p class="message">
+    Đường dẫn bạn vừa truy cập <strong>không tồn tại</strong> trong hệ thống HSGA.<br>
+    Có thể số điện thoại bạn nhập chưa được đăng ký, hoặc đã có sai sót trong đường dẫn.
+  </p>
+
+  <div class="hint">◆ Vui lòng kiểm tra lại hoặc quay về trang chủ ◆</div>
+
+  <div class="actions">
+    <a class="btn" href="/"><i class="fas fa-home"></i> Trang chủ HSGA</a>
+    <a class="btn secondary" href="mailto:hello@hsga.vn"><i class="fas fa-envelope"></i> Liên hệ HSGA</a>
+  </div>
+</div>
+
+<div class="footer">HSGA · Hoa Sen Graduate Alumni · hsga.vn</div>
+
+</body>
+</html>
