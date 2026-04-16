@@ -490,6 +490,19 @@
     padding: 4px 14px;
     letter-spacing: 0.2em;
   }
+  .member-card:not(.chairman)::before {
+    content: "BAN CHỦ NHIỆM";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--hsu-red);
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: 700;
+    padding: 4px 14px;
+    letter-spacing: 0.2em;
+  }
   .member-card:hover {
     border-color: var(--zen-copper);
     background: rgba(255, 255, 255, 0.06);
@@ -797,13 +810,40 @@
   }
 
   @media (max-width: 768px) {
-    .constellation { height: 1600px; }
+    .constellation { height: 1400px; }
     .name-modern { letter-spacing: 0.2em; }
-    .star { width: 72px; height: 72px; font-size: 9px; }
-    .hsu-logo { width: 160px; height: 160px; font-size: 32px; }
+    .star { width: 68px; height: 68px; font-size: 9px; }
+    .star.community { width: 38px; height: 38px; }
+    .hsu-logo { width: 140px; height: 140px; font-size: 32px; }
     .modal-box { padding: 2rem 1.25rem; }
     .modal-header { flex-direction: column; text-align: center; gap: 18px; }
     .info-grid { grid-template-columns: 1fr; }
+    .slogan-copper { letter-spacing: 0.35em; text-indent: 0.35em; }
+    .section-title { font-size: 16px; letter-spacing: 0.2em; }
+    .section-sub { font-size: 10px; letter-spacing: 0.15em; }
+    .member-card { padding: 2rem 1rem 1.5rem; }
+    .member-card .member-name { font-size: 12px; min-height: 32px; }
+    .member-card .member-role { font-size: 7.5px; }
+    .member-card.chairman::before,
+    .member-card:not(.chairman)::before { font-size: 6.5px; padding: 3px 10px; letter-spacing: 0.18em; }
+    .zen-btn { font-size: 9px; padding: 14px 24px; letter-spacing: 0.25em; }
+    .zen-box { padding: 1.5rem !important; }
+    .community-card { padding: 1rem 0.75rem; }
+    .community-card .c-name { font-size: 10px; }
+    .community-card .c-avatar { width: 40px; height: 40px; }
+    .lang-section { gap: 10px; padding: 12px 16px; }
+    .lang-btn { font-size: 9px; }
+    header.p-12, header.p-16 { padding: 2rem 1rem; }
+  }
+  @media (max-width: 420px) {
+    .name-modern { font-size: clamp(2.4rem, 14vw, 4rem); letter-spacing: 0.15em; }
+    .slogan-copper { font-size: 8px; letter-spacing: 0.25em; text-indent: 0.25em; }
+    .subtitle-zen { font-size: 10px; }
+    .member-avatar { width: 70px; height: 70px; }
+    .star { width: 60px; height: 60px; }
+    .star.community { width: 32px; height: 32px; }
+    .constellation { height: 1200px; }
+    .modal-avatar { width: 88px; height: 88px; font-size: 24px; }
   }
 </style>
 </head>
@@ -838,7 +878,7 @@
     <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s">Hoa Sen Graduate Alumni</p>
     <p class="subtitle-zen mb-3 stagger" style="animation-delay: 0.5s">Câu lạc bộ Hội viên</p>
     <p class="subtitle-zen mb-4 stagger" style="animation-delay: 0.5s; opacity:0.5">Nơi những vì sao Hoa Sen hội tụ</p>
-    <p class="subtitle-zen mb-16 stagger" style="animation-delay: 0.55s; opacity:0.4">★ 13 BCN · ◦ 60 Hội viên Cộng đồng ★</p>
+    <p class="subtitle-zen mb-16 stagger" style="animation-delay: 0.55s; opacity:0.4">★ Ban chủ nhiệm và Hội viên Cộng đồng ★</p>
 
     <!-- CTA -->
     <div class="mb-10 stagger flex flex-col md:flex-row gap-4 justify-center items-center" style="animation-delay: 0.6s">
@@ -848,7 +888,7 @@
     </div>
 
     <p class="text-[8px] text-slate-400 uppercase tracking-[0.3em] mb-6 stagger" style="animation-delay: 0.7s">
-      ◆ Click vào bất kỳ ngôi sao nào trong 73 hội viên để khám phá ◆
+      ◆ Click vào bất kỳ ngôi sao nào trong hội viên để khám phá ◆
     </p>
 
     <!-- CONSTELLATION -->
@@ -965,7 +1005,7 @@
       },
       {
         id:2, initials:"TNHP", name:"Trần Nguyễn Hồng Phương", phone:"0902938962",avatar:"avatars/0902938962.jpg",
-        role:"Thành viên BCN", position:"Giám đốc dự án",
+        role:"Thành viên BCN", position:"Giám đốc Sàn T&A Sài Gòn 3",
         organization:"Công ty Cổ phần Đầu tư T&A",
         cohort:"Học viên MBA Khóa 16",
         tagline:"Đầu tư · Quản lý dự án",
