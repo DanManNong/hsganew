@@ -2027,6 +2027,7 @@
         <div class="field-group">
           <div class="field-label">Liên hệ</div>
           <div class="info-grid">
+            <div class="info-item"><div class="lbl">Điện thoại</div><div class="val"><a href="/${m.phone}" style="color:inherit;text-decoration:none;border-bottom:1px dashed rgba(0,159,232,0.45);">${m.phone}</a></div></div>
             <div class="info-item"><div class="lbl">Email</div><div class="val">${m.email}</div></div>
             <div class="info-item"><div class="lbl">Website</div><div class="val">${m.website || 'Đang cập nhật'}</div></div>
           </div>
@@ -2035,7 +2036,7 @@
         <a href="${personalUrl}" class="personal-link-btn">
           Xem trang cá nhân đầy đủ →
         </a>
-        <div class="personal-link-url">hsga.vn/${m.phone}</div>
+        <div class="personal-link-url"><a href="/${m.phone}" style="color:inherit;text-decoration:none;">hsga.vn/${m.phone}</a></div>
       `;
       document.getElementById('modalBackdrop').classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -2073,13 +2074,20 @@
           <div class="field-label">Liên hệ</div>
           <div class="info-grid">
             <div class="info-item"><div class="lbl">Email</div><div class="val">${m.email || 'Đang cập nhật'}</div></div>
-            <div class="info-item"><div class="lbl">Điện thoại</div><div class="val">${m.phone && !m.phone.startsWith('c') ? m.phone : 'Đang cập nhật'}</div></div>
+            <div class="info-item"><div class="lbl">Điện thoại</div><div class="val">${m.phone && !m.phone.startsWith('c') ? `<a href="/${m.phone}" style="color:inherit;text-decoration:none;border-bottom:1px dashed rgba(0,159,232,0.45);">${m.phone}</a>` : 'Đang cập nhật'}</div></div>
           </div>
         </div>
 
+        ${m.phone && !m.phone.startsWith('c') ? `
+        <a href="/${m.phone}" class="personal-link-btn">
+          Xem trang cá nhân đầy đủ →
+        </a>
+        <div class="personal-link-url"><a href="/${m.phone}" style="color:inherit;text-decoration:none;">hsga.vn/${m.phone}</a></div>
+        ` : `
         <div class="personal-link-url" style="margin-top: 2rem;">
           ★ Hồ sơ hội viên cộng đồng · Nguồn: Form HSGA Learn & Connect
         </div>
+        `}
       `;
       document.getElementById('modalBackdrop').classList.add('active');
       document.body.style.overflow = 'hidden';
