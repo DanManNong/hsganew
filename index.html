@@ -843,7 +843,7 @@
     <!-- CTA -->
     <div class="mb-10 stagger flex flex-col md:flex-row gap-4 justify-center items-center" style="animation-delay: 0.6s">
       <button class="zen-btn"><i class="fas fa-user-plus mr-3"></i>Đăng ký hội viên</button>
-      <button class="zen-btn"><i class="fas fa-info-circle mr-3"></i>Về HSGA</button>
+      <button class="zen-btn" onclick="openAboutModal()"><i class="fas fa-info-circle mr-3"></i>Về HSGA</button>
       <button class="zen-btn"><i class="fas fa-calendar-alt mr-3"></i>Sự kiện</button>
     </div>
 
@@ -1971,6 +1971,49 @@
 
         <div class="personal-link-url" style="margin-top: 2rem;">
           ★ Hồ sơ hội viên cộng đồng · Nguồn: Form HSGA Learn & Connect
+        </div>
+      `;
+      document.getElementById('modalBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openAboutModal() {
+      document.getElementById('modalContent').innerHTML = `
+        <div class="modal-header">
+          <div class="modal-avatar chair" style="background:none;border:2px solid rgba(0,159,232,0.5);overflow:hidden;display:flex;align-items:center;justify-content:center;">
+            <img src="./hsu-lotus-white.png" alt="HSGA" style="width:62%;height:62%;object-fit:contain;" />
+          </div>
+          <div class="modal-title">
+            <div class="chair-badge">★ Giới thiệu chung</div>
+            <h2>Về HSGA</h2>
+            <div class="role">Hoa Sen Graduate Alumni</div>
+            <div class="tagline">Cộng đồng cựu học viên & học viên cao học · Đại học Hoa Sen</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Giới thiệu</div>
+          <div class="field-content">Hoa Sen Graduate Alumni (HSGA) là cộng đồng tinh hoa quy tụ các cựu học viên và học viên cao học của Trường Đại học Hoa Sen — những cá nhân giàu tri thức, bản lĩnh và tinh thần tiên phong trong nhiều lĩnh vực. HSGA không chỉ là hệ sinh thái kết nối, sẻ chia hành trình phát triển sự nghiệp mà còn là diễn đàn của các thành viên cùng nhau học hỏi, nâng tầm năng lực và mở rộng cơ hội hợp tác.</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Tầm nhìn</div>
+          <div class="field-content">Trở thành mạng lưới alumni sau đại học Hoa Sen uy tín, năng động và có sức ảnh hưởng trong cộng đồng doanh nhân — trí thức. HSGA hướng đến việc kiến tạo một không gian kết nối bền vững, nơi tri thức được lan tỏa và giá trị được cộng hưởng.</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Sứ mệnh</div>
+          <div class="field-content"><span style="color:#009FE8;font-weight:600;letter-spacing:0.05em;">Gắn kết — Phát triển — Phụng sự.</span> HSGA tổ chức đa dạng các hoạt động nhằm hiện thực hóa sứ mệnh này:
+            <div class="bullet">Workshop chuyên đề học thuật &amp; chuyên môn</div>
+            <div class="bullet">Networking kinh doanh đa ngành (đặc biệt trong lĩnh vực công nghệ và quản trị)</div>
+            <div class="bullet">Mentoring 1-1 giữa các thế hệ hội viên</div>
+            <div class="bullet">Sân chơi thể thao &amp; các hoạt động gắn kết cộng đồng</div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Vai trò</div>
+          <div class="field-content">HSGA chính là cầu nối giữa tri thức học thuật và thực tiễn doanh nghiệp — nơi mỗi thành viên cùng nhau tạo dựng giá trị bền vững và lan tỏa tinh thần Đại học Hoa Sen trong cộng đồng.</div>
         </div>
       `;
       document.getElementById('modalBackdrop').classList.add('active');
