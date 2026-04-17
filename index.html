@@ -1113,7 +1113,7 @@
     <!-- BAN CHỦ NHIỆM SECTION -->
     <section class="w-full max-w-7xl mb-32 stagger px-4" style="animation-delay: 1s">
       <h2 class="section-title">Ban Chủ nhiệm HSGA</h2>
-      <p class="section-sub">Nhiệm kỳ 2026 — 2027 · 13 thành viên</p>
+      <p class="section-sub">Nhiệm kỳ 2026 — 2027 · 14 thành viên</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="membersGrid"></div>
     </section>
 
@@ -1362,6 +1362,18 @@
         expertise:["Trải nghiệm khách hàng","Giáo dục","Quản trị học viên"],
         achievements:["Đang cập nhật"],
         email:"member13@hsga.vn", website:""
+      },
+      {
+        id:14, initials:"ANV", name:"Amy Nhâm Vũ", phone:"0947100279",
+        role:"Thành viên BCN", position:"Founder & Training Expert",
+        organization:"Hospiway Vietnam",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Hospitality · Sales Training · Marketing",
+        bio:"Hơn 13 năm kinh nghiệm trong ngành hospitality tại các tập đoàn quốc tế Accor và Marriott. Khởi nghiệp từ vị trí thư ký bếp và thăng tiến lên Giám đốc Kinh doanh & Marketing (DOSM). Sáng lập Hospiway Vietnam — nền tảng đào tạo và tư vấn chiến lược bán hàng, marketing cho ngành khách sạn, nhà hàng, du lịch. Triết lý: 'Bán hàng chính là phục vụ.' Sứ mệnh: hỗ trợ 1 triệu nhân sự hospitality phát triển nghề.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Đào tạo bán hàng","Hospitality Management","Marketing chiến lược","Upselling","Corporate Training"],
+        achievements:["13+ năm kinh nghiệm tại Accor & Marriott","Từ thư ký bếp lên Director of Business & Marketing (DOSM)","Sáng lập Hospiway Vietnam"],
+        email:"amynhamvu@gmail.com", website:"www.hospiway.vn"
       }
     ];
 
@@ -2050,7 +2062,8 @@
       { top: '60%', left: '75%' },
       { top: '78%', left: '12%' },
       { top: '80%', left: '42%' },
-      { top: '82%', left: '70%' }
+      { top: '82%', left: '70%' },
+      { top: '38%', left: '5%'  }   /* 14th — Amy Nhâm Vũ */
     ];
 
     // Helpers for search filter — normalize diacritics and build a haystack
@@ -2060,7 +2073,7 @@
       m.name, m.phone, m.cohort, m.role, m.position, m.organization, m.position_org, m.initials
     ].filter(Boolean).join(' '));
 
-    // Render 13 BCN stars (full size, bright)
+    // Render BCN stars (full size, bright)
     members.forEach((m, i) => {
       const star = document.createElement('div');
       star.className = 'star';
@@ -2068,7 +2081,7 @@
       star.style.left = positions[i].left;
       star.style.animationDelay = `${i * 0.6}s, ${i * 0.4}s`;
       star.dataset.filter = _filterText(m);
-      // All 13 BCN stars same size (80px) — chairman distinguished by badge only
+      // All BCN stars same size (80px) — chairman distinguished by badge only
       const starContent = m.avatar
           ? `<img class="star-photo" src="./${m.avatar}" alt="${m.name}" />`
           : `<img class="star-logo" src="./hsu-lotus-white.png" alt="Hoa Sen" />`;
