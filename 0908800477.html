@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoàng Thị Thanh Hiền — Hội viên Cộng đồng HSGA</title>
+<meta name="description" content="Hoàng Thị Thanh Hiền — Học viên Thạc sĩ. Freelance. Hội viên Cộng đồng HSGA — Hoa Sen Graduate Alumni.">
+<meta property="og:title" content="Hoàng Thị Thanh Hiền | HSGA — Hoa Sen Graduate Alumni">
+<meta property="og:url" content="https://www.hsga.vn/0908800477">
+<meta property="og:type" content="profile">
+<meta name="robots" content="noindex,follow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Inter:200,300,400,500,600,700&subset=latin,latin-ext,vietnamese&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hsu-blue:#024DA1;--hsu-dark:#012B6B;--hsu-cyan:#009FE8;
+    --hsu-red:#ED1C24;--hsu-yellow:#FFF100;--hsu-text:#FFFFFF;
+    --hsu-border:rgba(255,255,255,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{
+    font-family:'Inter','Myriad Pro',Arial,Helvetica,sans-serif;
+    background:var(--hsu-blue);color:var(--hsu-text);min-height:100vh;line-height:1.6;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 L50 30 L40 25 L30 30 Z M40 10 L45 28 M40 10 L35 28 M25 35 L40 28 L55 35' fill='none' stroke='%23FFFFFF' stroke-width='0.5' stroke-opacity='0.07'/%3E%3Crect x='0' y='0' width='80' height='80' fill='none' stroke='%23FFFFFF' stroke-width='0.3' stroke-opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events:none;z-index:-1;
+  }
+  @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes avatarGlow{
+    0%,100%{box-shadow:0 0 60px rgba(0,159,232,0.3),inset 0 0 40px rgba(0,0,0,0.3)}
+    50%{box-shadow:0 0 100px rgba(0,159,232,0.55),inset 0 0 40px rgba(0,0,0,0.3)}
+  }
+  .stagger{opacity:0;animation:fadeUp 1s forwards}
+  .nav{padding:24px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--hsu-border);background:rgba(0,0,0,0.15)}
+  .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+  .nav-logo{width:44px;height:44px;border-radius:50%;border:1px solid var(--hsu-border);background:radial-gradient(circle at 35% 35%,rgba(0,159,232,0.2),rgba(1,43,107,0.7) 70%);display:flex;align-items:center;justify-content:center;padding:4px}
+  .nav-logo img{width:100%;height:auto;filter:drop-shadow(0 0 8px rgba(0,159,232,0.5)) brightness(1.15)}
+  .nav-brand-text{font-size:14px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase}
+  .nav-back{color:rgba(255,255,255,0.6);text-decoration:none;font-size:9px;padding:10px 22px;border:1px solid var(--hsu-border);letter-spacing:0.25em;text-transform:uppercase;transition:0.3s}
+  .nav-back:hover{color:var(--hsu-cyan);border-color:var(--hsu-cyan)}
+  .profile-header{max-width:1100px;margin:60px auto 40px;padding:0 40px;text-align:center}
+  .member-badge{display:inline-block;background:rgba(0,159,232,0.10);color:rgba(255,255,255,0.85);font-size:9px;font-weight:700;padding:7px 20px;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:32px;border:1px solid var(--hsu-border)}
+  .avatar-large{width:180px;height:180px;border-radius:50%;border:1px solid rgba(0,159,232,0.4);background:radial-gradient(circle at 50% 45%,rgba(0,159,232,0.18),rgba(1,43,107,0.65) 55%,rgba(1,20,60,0.85) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 32px;position:relative;animation:avatarGlow 5s ease-in-out infinite;overflow:hidden}
+  .avatar-large img{width:60%;height:auto;opacity:0.85;filter:drop-shadow(0 0 15px rgba(0,159,232,0.6)) brightness(1.1)}
+  .avatar-large .initials{font-size:52px;font-weight:300;letter-spacing:0.08em;color:var(--hsu-cyan);filter:drop-shadow(0 0 14px rgba(0,159,232,0.5))}
+  .avatar-large::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(0,159,232,0.22)}
+  .avatar-large::after{content:"";position:absolute;inset:-24px;border-radius:50%;border:1px solid rgba(0,159,232,0.1)}
+  .profile-name{font-size:clamp(30px,5.5vw,52px);font-weight:700;letter-spacing:0.1em;padding-left:0.1em;text-transform:uppercase;background:linear-gradient(110deg,#009FE8 0%,#60C8FF 25%,#fff 50%,#60C8FF 75%,#009FE8 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 8s ease infinite;line-height:1.25;padding-top:0.1em;margin-bottom:18px}
+  .profile-position{font-size:11px;font-weight:600;color:var(--hsu-cyan);text-transform:uppercase;letter-spacing:0.3em;margin-bottom:12px;padding:0 1rem}
+  .profile-org{color:rgba(255,255,255,0.6);font-size:11px;max-width:600px;margin:0 auto 24px;line-height:1.7;padding:0 1rem}
+  .profile-cohort{display:inline-block;padding:10px 24px;background:rgba(0,159,232,0.08);border:1px solid var(--hsu-border);font-size:9px;color:#fff;letter-spacing:0.3em;text-transform:uppercase}
+  .contact-row{display:flex;gap:14px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+  .contact-row a{width:44px;height:44px;border:1px solid var(--hsu-border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-size:14px;transition:0.3s;text-decoration:none}
+  .contact-row a:hover{color:var(--hsu-cyan);border-color:var(--hsu-cyan);background:rgba(0,159,232,0.08)}
+  .content{max-width:1100px;margin:0 auto;padding:0 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .content .full{grid-column:1/-1}
+  .card{background:rgba(0,0,0,0.2);border:1px solid var(--hsu-border);padding:32px;transition:0.4s}
+  .card:hover{border-color:rgba(0,159,232,0.4);background:rgba(0,159,232,0.05)}
+  .card-label{font-size:9px;font-weight:700;color:var(--hsu-cyan);text-transform:uppercase;letter-spacing:0.35em;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--hsu-border)}
+  .card-content{color:rgba(255,255,255,0.85);font-size:13px;line-height:1.8}
+  .info-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:11px}
+  .info-row:last-child{border-bottom:none}
+  .info-row .lbl{color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.2em;font-size:9px}
+  .info-row .val{color:#fff;text-align:right;font-weight:600;word-break:break-word}
+  .info-row .val a{color:#fff;text-decoration:none;border-bottom:1px dashed rgba(0,159,232,0.4);transition:0.2s}
+  .info-row .val a:hover{color:var(--hsu-cyan);border-bottom-color:var(--hsu-cyan)}
+  footer{text-align:center;padding:50px 40px;border-top:1px solid var(--hsu-border);margin-top:40px;color:rgba(255,255,255,0.5);font-size:8px;letter-spacing:0.4em;text-transform:uppercase}
+  footer a{color:rgba(255,255,255,0.7);text-decoration:none}
+  @media(max-width:768px){
+    .content{grid-template-columns:1fr;padding:0 20px 60px}
+    .nav{padding:18px 20px}
+    .profile-header{padding:0 20px}
+    .avatar-large{width:140px;height:140px}
+    .avatar-large .initials{font-size:40px}
+  }
+</style>
+</head>
+<body>
+<nav class="nav stagger">
+  <a href="./index.html" class="nav-brand">
+    <div class="nav-logo"><img src="./HSU-NoTag-W-VIE.png" alt="HSU" /></div>
+    <div class="nav-brand-text">HSGA</div>
+  </a>
+  <a href="./index.html" class="nav-back">← Về trang chính</a>
+</nav>
+<header class="profile-header stagger" style="animation-delay:0.15s">
+  <div class="member-badge">Hội viên Cộng đồng HSGA · 2026</div>
+  <div class="avatar-large">
+    <div class="initials">HTTH</div>
+  </div>
+  <h1 class="profile-name">Hoàng Thị Thanh Hiền</h1>
+  <div class="profile-position">Học viên Thạc sĩ</div>
+  <p class="profile-org">Freelance</p>
+  <div class="profile-cohort">MAEK12 · Đại học Hoa Sen</div>
+  <div class="contact-row">
+    <a href="tel:+84908800477" title="Gọi 0908800477"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://zalo.me/0908800477" target="_blank" rel="noopener" title="Nhắn Zalo"><i class="fas fa-comment-dots"></i></a>
+    <a href="mailto:Hientthoangconsulting@gmail.com" title="Email Hientthoangconsulting@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</header>
+<main class="content">
+  <section class="card full stagger" style="animation-delay:0.4s">
+    <div class="card-label">Thông tin liên hệ</div>
+    <div class="card-content">
+      <div class="info-row"><span class="lbl">Họ tên</span><span class="val">Hoàng Thị Thanh Hiền</span></div>
+      <div class="info-row"><span class="lbl">Điện thoại</span><span class="val"><a href="tel:+84908800477">0908800477</a></span></div>
+      <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:Hientthoangconsulting@gmail.com">Hientthoangconsulting@gmail.com</a></span></div>
+      <div class="info-row"><span class="lbl">Link cá nhân</span><span class="val"><a href="https://www.hsga.vn/0908800477">hsga.vn/0908800477</a></span></div>
+    </div>
+  </section>
+  <section class="card stagger" style="animation-delay:0.5s">
+    <div class="card-label">Liên kết HSU</div>
+    <div class="card-content">
+      <div class="info-row"><span class="lbl">Khóa</span><span class="val">MAEK12</span></div>
+      <div class="info-row"><span class="lbl">Vai trò</span><span class="val">Học viên Thạc sĩ</span></div>
+    </div>
+  </section>
+  <section class="card stagger" style="animation-delay:0.55s">
+    <div class="card-label">Vị trí công tác</div>
+    <div class="card-content">Freelance</div>
+  </section>
+</main>
+<footer class="stagger" style="animation-delay:0.7s">
+  <p>HSGA · HOA SEN GRADUATE ALUMNI</p>
+  <p style="margin-top:8px;opacity:.5">Trang cá nhân · hsga.vn/0908800477</p>
+  <p style="margin-top:10px;opacity:.4">© 2026 · <a href="./index.html">www.hsga.vn</a></p>
+</footer>
+</body>
+</html>
