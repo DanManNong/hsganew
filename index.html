@@ -676,8 +676,7 @@
     color: var(--hsu-dark, #012B6B);
     font-size: 6.5px;
     padding: 4px 12px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
+    letter-spacing: 0.15em;
   }
   .member-card:hover {
     border-color: var(--zen-copper);
@@ -1217,30 +1216,6 @@
     // ====== DỮ LIỆU 13 THÀNH VIÊN BAN CHỦ NHIỆM HSGA 2026-2027 ======
     const members = [
       {
-        id:16, initials:"NTG", name:"TS Nguyễn Thuỳ Giang", phone:"0906160383",avatar:"avatars/0906160383.jpg",orgClass:"vsdhld",
-        role:"Thành viên BCN", position:"Viện trưởng",
-        organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
-        cohort:"Lãnh đạo VSĐH&LĐ · HSU",
-        tagline:"Đào tạo Sau đại học · Quản lý Nhân sự · Lãnh đạo",
-        bio:"Tiến sĩ Quản lý Nhân sự, tốt nghiệp Tomas Bata University in Zlín (Cộng hòa Séc). Hiện là Viện trưởng Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen, dẫn dắt các chương trình đào tạo thạc sĩ và phát triển lãnh đạo. Chuyên gia về Quản lý Nhân sự với nhiều năm kinh nghiệm giảng dạy, nghiên cứu và cố vấn học thuật, đồng hành cùng cộng đồng alumni HSGA trên hành trình phát triển bền vững.",
-        education:["Tiến sĩ Quản lý Nhân sự — Tomas Bata University in Zlín, Cộng hòa Séc"],
-        expertise:["Human Resource Management","Đào tạo Sau đại học","Phát triển Lãnh đạo","Giảng dạy & Nghiên cứu","Cố vấn học thuật"],
-        achievements:["Viện trưởng VSĐH&LĐ — Đại học Hoa Sen","Tiến sĩ Quản lý Nhân sự (Tomas Bata University, Cộng hòa Séc)","Phó Ban Cố vấn cuộc thi 'Future Human Resource Manager 2023'"],
-        email:"giang.nguyenthuy@hoasen.edu.vn", website:"https://www.facebook.com/gianna.nguyen"
-      }
-      {
-        id:15, initials:"NBA", name:"Nguyễn Bảo Anh", phone:"0983928904",avatar:"avatars/0983928904.jpg",orgClass:"vsdhld",
-        role:"Thành viên BCN", position:"Phó Viện trưởng",
-        organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
-        cohort:"Lãnh đạo VSĐH&LĐ · HSU",
-        tagline:"Du lịch · Quản lý điểm đến · Thương hiệu du lịch",
-        bio:"Hơn 20 năm kinh nghiệm trong quản lý và xúc tiến du lịch, kết hợp với hơn 5 năm tư vấn quản lý và xây dựng chiến lược thương hiệu điểm đến du lịch. Hiện là Phó Viện trưởng Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen, đồng hành cùng học viên cao học và cộng đồng alumni trong hành trình phát triển nghề nghiệp và tri thức.",
-        education:["Thạc sĩ Quản lý điểm đến (Destination Management)","Cử nhân Quản trị Du lịch","Cử nhân Anh văn"],
-        expertise:["Quản lý du lịch","Xúc tiến du lịch","Quản lý điểm đến","Chiến lược thương hiệu du lịch","Tư vấn quản lý"],
-        achievements:["20+ năm kinh nghiệm quản lý & xúc tiến du lịch","5+ năm tư vấn chiến lược thương hiệu điểm đến","Phó Viện trưởng VSĐH&LĐ — Đại học Hoa Sen"],
-        email:"anh.nguyenbao@hoasen.edu.vn", website:""
-      },
-      {
         id:1,
         initials:"NTP",
         name:"Nguyễn Tấn Phong",
@@ -1259,90 +1234,6 @@
         website:"nguyentanphong.com"
       },
       {
-        id:13, initials:"TTTD", name:"Trần Thị Thùy Dung", phone:"0399908464",
-        role:"Thành viên BCN", position:"Chuyên viên Chăm sóc — Trải nghiệm học viên",
-        organization:"Viện Sau đại học & Lãnh đạo — Trường Đại học Hoa Sen",
-        cohort:"Học viên MBA Khóa 20",
-        tagline:"Giáo dục · Trải nghiệm học viên",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
-        expertise:["Trải nghiệm khách hàng","Giáo dục","Quản trị học viên"],
-        achievements:["Đang cập nhật"],
-        email:"member13@hsga.vn", website:""
-      },
-      {
-        id:6, initials:"LHMH", name:"Lê Hoàng Mỹ Hạnh", phone:"0900000006",avatar:"avatars/0900000006.jpg",
-        role:"Thành viên BCN", position:"CEO",
-        organization:"Công ty Green Communications",
-        cohort:"Học viên MBA Khóa 18",
-        tagline:"Truyền thông xanh · Phát triển bền vững",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
-        expertise:["Truyền thông","ESG","Phát triển bền vững"],
-        achievements:["Đang cập nhật"],
-        email:"member6@hsga.vn", website:""
-      },
-      {
-        id:12, initials:"ĐQH", name:"Đậu Quốc Hưng", phone:"0900000012",
-        role:"Thành viên BCN", position:"Phó Ban Nghiên cứu & Phát triển, Phòng Marketing",
-        organization:"Tổng Công ty Tân Cảng Sài Gòn",
-        cohort:"Cựu học viên MBA Khóa 5",
-        tagline:"R&D · Marketing",
-        bio:"Đang cập nhật.",
-        education:["Cựu học viên MBA Khóa 5 — Đại học Hoa Sen"],
-        expertise:["R&D","Marketing","Logistics"],
-        achievements:["Đang cập nhật"],
-        email:"member12@hsga.vn", website:""
-      },
-      {
-        id:10, initials:"TTM", name:"Trương Trúc Mai", phone:"0900000010",
-        role:"Thành viên BCN", position:"Business Project Development Manager",
-        organization:"CTCP Văn hóa Sách Sài Gòn / Zenbooks — Tập đoàn Thiên Long",
-        cohort:"Học viên MBA Khóa 17",
-        tagline:"Xuất bản · Phát triển dự án",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 17 — Đại học Hoa Sen"],
-        expertise:["Xuất bản","Phát triển dự án","Văn hóa đọc"],
-        achievements:["Đang cập nhật"],
-        email:"member10@hsga.vn", website:""
-      },
-      {
-        id:9, initials:"NTM", name:"Nguyễn Thị Mạnh", phone:"0900000009",
-        role:"Thành viên BCN", position:"Đại diện văn phòng",
-        organization:"VINASA — Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam",
-        cohort:"Học viên MBA Khóa 18",
-        tagline:"Công nghệ · Hiệp hội",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
-        expertise:["CNTT","Quan hệ hiệp hội","Phần mềm"],
-        achievements:["Đang cập nhật"],
-        email:"member9@hsga.vn", website:""
-      },
-      {
-        id:11, initials:"NTTN", name:"Nguyễn Thị Tuyết Nhung", phone:"0938835512",
-        role:"Thành viên BCN", position:"Marketing Lead",
-        organization:"Nexus Sport Event",
-        cohort:"MBA Khóa 19",
-        tagline:"Marketing · Thể thao",
-        bio:"Đang cập nhật.",
-        education:["MBA Khóa 19 — Đại học Hoa Sen"],
-        expertise:["Marketing","Tổ chức sự kiện thể thao"],
-        achievements:["Đang cập nhật"],
-        email:"member11@hsga.vn", website:""
-      },
-      {
-        id:8, initials:"VMP", name:"Võ Minh Phụng", phone:"0909713488",
-        role:"Thành viên BCN", position:"Marketing Manager",
-        organization:"Freelance",
-        cohort:"Học viên MBA Khóa 20",
-        tagline:"Marketing · Tự do",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
-        expertise:["Digital Marketing","Brand","Content"],
-        achievements:["Đang cập nhật"],
-        email:"member8@hsga.vn", website:""
-      },
-      {
         id:2, initials:"TNHP", name:"Trần Nguyễn Hồng Phương", phone:"0902938962",avatar:"avatars/0902938962.jpg",
         role:"Thành viên BCN", position:"Giám đốc Sàn T&A Sài Gòn 3",
         organization:"Công ty Cổ phần Đầu tư T&A",
@@ -1353,30 +1244,6 @@
         expertise:["Quản lý dự án","Đầu tư"],
         achievements:["Đang cập nhật"],
         email:"member2@hsga.vn", website:""
-      },
-      {
-        id:7, initials:"NTHT", name:"Nguyễn Thị Hồng Thanh", phone:"0900000007",
-        role:"Thành viên BCN", position:"CEO",
-        organization:"Công ty TNHH DV Truyền thông và Sự kiện Sao Vàng",
-        cohort:"Cựu học viên MBA Khóa 11",
-        tagline:"Sự kiện · Truyền thông",
-        bio:"Đang cập nhật.",
-        education:["Cựu học viên MBA Khóa 11 — Đại học Hoa Sen"],
-        expertise:["Tổ chức sự kiện","Truyền thông","Quản lý dịch vụ"],
-        achievements:["Đang cập nhật"],
-        email:"member7@hsga.vn", website:""
-      },
-      {
-        id:5, initials:"NQTh", name:"Nguyễn Quang Thiện", phone:"0900000005",
-        role:"Thành viên BCN", position:"CEO",
-        organization:"T&C Logistics Co., Ltd",
-        cohort:"Học viên MBA Khóa 18",
-        tagline:"Logistics · Lãnh đạo doanh nghiệp",
-        bio:"Đang cập nhật.",
-        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
-        expertise:["Logistics","Lãnh đạo doanh nghiệp","Vận tải"],
-        achievements:["Đang cập nhật"],
-        email:"member5@hsga.vn", website:""
       },
       {
         id:3, initials:"NQT", name:"Nguyễn Quang Tuấn", phone:"0900000003",
@@ -1403,6 +1270,114 @@
         email:"member4@hsga.vn", website:""
       },
       {
+        id:5, initials:"NQTh", name:"Nguyễn Quang Thiện", phone:"0900000005",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"T&C Logistics Co., Ltd",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Logistics · Lãnh đạo doanh nghiệp",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Logistics","Lãnh đạo doanh nghiệp","Vận tải"],
+        achievements:["Đang cập nhật"],
+        email:"member5@hsga.vn", website:""
+      },
+      {
+        id:6, initials:"LHMH", name:"Lê Hoàng Mỹ Hạnh", phone:"0900000006",avatar:"avatars/0900000006.jpg",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"Công ty Green Communications",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Truyền thông xanh · Phát triển bền vững",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["Truyền thông","ESG","Phát triển bền vững"],
+        achievements:["Đang cập nhật"],
+        email:"member6@hsga.vn", website:""
+      },
+      {
+        id:7, initials:"NTHT", name:"Nguyễn Thị Hồng Thanh", phone:"0900000007",
+        role:"Thành viên BCN", position:"CEO",
+        organization:"Công ty TNHH DV Truyền thông và Sự kiện Sao Vàng",
+        cohort:"Cựu học viên MBA Khóa 11",
+        tagline:"Sự kiện · Truyền thông",
+        bio:"Đang cập nhật.",
+        education:["Cựu học viên MBA Khóa 11 — Đại học Hoa Sen"],
+        expertise:["Tổ chức sự kiện","Truyền thông","Quản lý dịch vụ"],
+        achievements:["Đang cập nhật"],
+        email:"member7@hsga.vn", website:""
+      },
+      {
+        id:8, initials:"VMP", name:"Võ Minh Phụng", phone:"0909713488",
+        role:"Thành viên BCN", position:"Marketing Manager",
+        organization:"Freelance",
+        cohort:"Học viên MBA Khóa 20",
+        tagline:"Marketing · Tự do",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
+        expertise:["Digital Marketing","Brand","Content"],
+        achievements:["Đang cập nhật"],
+        email:"member8@hsga.vn", website:""
+      },
+      {
+        id:9, initials:"NTM", name:"Nguyễn Thị Mạnh", phone:"0900000009",
+        role:"Thành viên BCN", position:"Đại diện văn phòng",
+        organization:"VINASA — Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam",
+        cohort:"Học viên MBA Khóa 18",
+        tagline:"Công nghệ · Hiệp hội",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 18 — Đại học Hoa Sen"],
+        expertise:["CNTT","Quan hệ hiệp hội","Phần mềm"],
+        achievements:["Đang cập nhật"],
+        email:"member9@hsga.vn", website:""
+      },
+      {
+        id:10, initials:"TTM", name:"Trương Trúc Mai", phone:"0900000010",
+        role:"Thành viên BCN", position:"Business Project Development Manager",
+        organization:"CTCP Văn hóa Sách Sài Gòn / Zenbooks — Tập đoàn Thiên Long",
+        cohort:"Học viên MBA Khóa 17",
+        tagline:"Xuất bản · Phát triển dự án",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 17 — Đại học Hoa Sen"],
+        expertise:["Xuất bản","Phát triển dự án","Văn hóa đọc"],
+        achievements:["Đang cập nhật"],
+        email:"member10@hsga.vn", website:""
+      },
+      {
+        id:11, initials:"NTTN", name:"Nguyễn Thị Tuyết Nhung", phone:"0938835512",
+        role:"Thành viên BCN", position:"Marketing Lead",
+        organization:"Nexus Sport Event",
+        cohort:"MBA Khóa 19",
+        tagline:"Marketing · Thể thao",
+        bio:"Đang cập nhật.",
+        education:["MBA Khóa 19 — Đại học Hoa Sen"],
+        expertise:["Marketing","Tổ chức sự kiện thể thao"],
+        achievements:["Đang cập nhật"],
+        email:"member11@hsga.vn", website:""
+      },
+      {
+        id:12, initials:"ĐQH", name:"Đậu Quốc Hưng", phone:"0900000012",
+        role:"Thành viên BCN", position:"Phó Ban Nghiên cứu & Phát triển, Phòng Marketing",
+        organization:"Tổng Công ty Tân Cảng Sài Gòn",
+        cohort:"Cựu học viên MBA Khóa 5",
+        tagline:"R&D · Marketing",
+        bio:"Đang cập nhật.",
+        education:["Cựu học viên MBA Khóa 5 — Đại học Hoa Sen"],
+        expertise:["R&D","Marketing","Logistics"],
+        achievements:["Đang cập nhật"],
+        email:"member12@hsga.vn", website:""
+      },
+      {
+        id:13, initials:"TTTD", name:"Trần Thị Thùy Dung", phone:"0399908464",
+        role:"Thành viên BCN", position:"Chuyên viên Chăm sóc — Trải nghiệm học viên",
+        organization:"Viện Sau đại học & Lãnh đạo — Trường Đại học Hoa Sen",
+        cohort:"Học viên MBA Khóa 20",
+        tagline:"Giáo dục · Trải nghiệm học viên",
+        bio:"Đang cập nhật.",
+        education:["Học viên MBA Khóa 20 — Đại học Hoa Sen"],
+        expertise:["Trải nghiệm khách hàng","Giáo dục","Quản trị học viên"],
+        achievements:["Đang cập nhật"],
+        email:"member13@hsga.vn", website:""
+      },
+      {
         id:14, initials:"ANV", name:"Amy Nhâm Vũ", phone:"0947100279",avatar:"avatars/0947100279.jpg",
         role:"Thành viên BCN", position:"Founder & Training Expert",
         organization:"Hospiway Vietnam",
@@ -1414,6 +1389,30 @@
         achievements:["13+ năm kinh nghiệm tại Accor & Marriott","Từ thư ký bếp lên Director of Business & Marketing (DOSM)","Sáng lập Hospiway Vietnam"],
         email:"amynhamvu@gmail.com", website:"www.hospiway.vn"
       },
+      {
+        id:15, initials:"NBA", name:"Nguyễn Bảo Anh", phone:"0983928904",avatar:"avatars/0983928904.jpg",orgClass:"vsdhld",
+        role:"Thành viên BCN", position:"Phó Viện trưởng",
+        organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
+        cohort:"Lãnh đạo VSĐH&LĐ · HSU",
+        tagline:"Du lịch · Quản lý điểm đến · Thương hiệu du lịch",
+        bio:"Hơn 20 năm kinh nghiệm trong quản lý và xúc tiến du lịch, kết hợp với hơn 5 năm tư vấn quản lý và xây dựng chiến lược thương hiệu điểm đến du lịch. Hiện là Phó Viện trưởng Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen, đồng hành cùng học viên cao học và cộng đồng alumni trong hành trình phát triển nghề nghiệp và tri thức.",
+        education:["Thạc sĩ Quản lý điểm đến (Destination Management)","Cử nhân Quản trị Du lịch","Cử nhân Anh văn"],
+        expertise:["Quản lý du lịch","Xúc tiến du lịch","Quản lý điểm đến","Chiến lược thương hiệu du lịch","Tư vấn quản lý"],
+        achievements:["20+ năm kinh nghiệm quản lý & xúc tiến du lịch","5+ năm tư vấn chiến lược thương hiệu điểm đến","Phó Viện trưởng VSĐH&LĐ — Đại học Hoa Sen"],
+        email:"anh.nguyenbao@hoasen.edu.vn", website:""
+      },
+      {
+        id:16, initials:"NTG", name:"TS Nguyễn Thuỳ Giang", phone:"0906160383",avatar:"avatars/0906160383.jpg",orgClass:"vsdhld",
+        role:"Thành viên BCN", position:"Viện trưởng",
+        organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
+        cohort:"Lãnh đạo VSĐH&LĐ · HSU",
+        tagline:"Đào tạo Sau đại học · Quản lý Nhân sự · Lãnh đạo",
+        bio:"Tiến sĩ Quản lý Nhân sự, tốt nghiệp Tomas Bata University in Zlín (Cộng hòa Séc). Hiện là Viện trưởng Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen, dẫn dắt các chương trình đào tạo thạc sĩ và phát triển lãnh đạo. Chuyên gia về Quản lý Nhân sự với nhiều năm kinh nghiệm giảng dạy, nghiên cứu và cố vấn học thuật, đồng hành cùng cộng đồng alumni HSGA trên hành trình phát triển bền vững.",
+        education:["Tiến sĩ Quản lý Nhân sự — Tomas Bata University in Zlín, Cộng hòa Séc"],
+        expertise:["Human Resource Management","Đào tạo Sau đại học","Phát triển Lãnh đạo","Giảng dạy & Nghiên cứu","Cố vấn học thuật"],
+        achievements:["Viện trưởng VSĐH&LĐ — Đại học Hoa Sen","Tiến sĩ Quản lý Nhân sự (Tomas Bata University, Cộng hòa Séc)","Phó Ban Cố vấn cuộc thi 'Future Human Resource Manager 2023'"],
+        email:"giang.nguyenthuy@hoasen.edu.vn", website:"https://www.facebook.com/gianna.nguyen"
+      }
     ];
 
     // ====== DỮ LIỆU 60 THÀNH VIÊN CỘNG ĐỒNG HSGA (từ form Learn & Connect) ======
@@ -2366,22 +2365,22 @@
     // ====== STAR FIELD — 13 NGÔI SAO ======
     const constellation = document.getElementById('constellation');
     const positions = [
-      { top: '15%', left: '62%' }, /* 1. TS Nguyễn Thuỳ Giang (Viện trưởng) */
-      { top: '25%', left: '50%' }, /* 2. Nguyễn Bảo Anh (Phó Viện trưởng) */
-      { top: '8%',  left: '45%' }, /* 3. Nguyễn Tấn Phong (Chủ nhiệm HSGA) */
-      { top: '82%', left: '70%' }, /* 4. Trần Thị Thùy Dung */
-      { top: '50%', left: '50%' }, /* 5. Lê Hoàng Mỹ Hạnh */
-      { top: '80%', left: '42%' }, /* 6. Đậu Quốc Hưng */
-      { top: '60%', left: '75%' }, /* 7. Trương Trúc Mai */
-      { top: '58%', left: '50%' }, /* 8. Nguyễn Thị Mạnh */
-      { top: '78%', left: '12%' }, /* 9. Nguyễn Thị Tuyết Nhung */
-      { top: '55%', left: '20%' }, /* 10. Võ Minh Phụng */
-      { top: '15%', left: '15%' }, /* 11. Trần Nguyễn Hồng Phương */
-      { top: '40%', left: '88%' }, /* 12. Nguyễn Thị Hồng Thanh */
-      { top: '35%', left: '62%' }, /* 13. Nguyễn Quang Thiện */
-      { top: '18%', left: '78%' }, /* 14. Nguyễn Quang Tuấn */
-      { top: '32%', left: '32%' }, /* 15. Trần Phạm Sơn Tùng */
-      { top: '38%', left: '5%'  }  /* 16. Amy Nhâm Vũ */
+      { top: '8%',  left: '45%' },
+      { top: '15%', left: '15%' },
+      { top: '18%', left: '78%' },
+      { top: '32%', left: '32%' },
+      { top: '35%', left: '62%' },
+      { top: '50%', left: '50%' },  /* Lê Hoàng Mỹ Hạnh — giữa chòm sao */
+      { top: '40%', left: '88%' },
+      { top: '55%', left: '20%' },
+      { top: '58%', left: '50%' },
+      { top: '60%', left: '75%' },
+      { top: '78%', left: '12%' },
+      { top: '80%', left: '42%' },
+      { top: '82%', left: '70%' },
+      { top: '38%', left: '5%'  },  /* 14th — Amy Nhâm Vũ */
+      { top: '25%', left: '50%' },  /* 15th — Nguyễn Bảo Anh */
+      { top: '15%', left: '62%' }   /* 16th — TS Nguyễn Thuỳ Giang */
     ];
 
     // Helpers for search filter — normalize diacritics and build a haystack
