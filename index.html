@@ -571,6 +571,10 @@
     height: 6px;
     border-radius: 0 0 3px 3px;
   }
+  /* Pill vàng cho thành viên Viện SĐH&LĐ trong Z10 */
+  .community-card.bcn.vsdhld::before {
+    background: var(--hsu-yellow);
+  }
   .community-card.bcn .c-role {
     color: var(--hsu-red);
     opacity: 1;
@@ -663,6 +667,16 @@
     font-weight: 700;
     padding: 4px 14px;
     letter-spacing: 0.2em;
+  }
+  /* Ribbon vàng cho thành viên Viện SĐH&LĐ (NBA, TS Giang, ...) —
+     ghi đè ribbon đỏ mặc định của BCN */
+  .member-card.vsdhld:not(.chairman)::before {
+    content: "VIỆN SAU ĐẠI HỌC VÀ LÃNH ĐẠO";
+    background: var(--hsu-yellow);
+    color: var(--hsu-dark, #012B6B);
+    font-size: 6.5px;
+    padding: 4px 12px;
+    letter-spacing: 0.15em;
   }
   .member-card:hover {
     border-color: var(--zen-copper);
@@ -1376,7 +1390,7 @@
         email:"amynhamvu@gmail.com", website:"www.hospiway.vn"
       },
       {
-        id:15, initials:"NBA", name:"Nguyễn Bảo Anh", phone:"0983928904",avatar:"avatars/0983928904.jpg",
+        id:15, initials:"NBA", name:"Nguyễn Bảo Anh", phone:"0983928904",avatar:"avatars/0983928904.jpg",orgClass:"vsdhld",
         role:"Thành viên BCN", position:"Phó Viện trưởng",
         organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
         cohort:"Lãnh đạo VSĐH&LĐ · HSU",
@@ -1388,7 +1402,7 @@
         email:"anh.nguyenbao@hoasen.edu.vn", website:""
       },
       {
-        id:16, initials:"NTG", name:"TS Nguyễn Thuỳ Giang", phone:"0906160383",avatar:"avatars/0906160383.jpg",
+        id:16, initials:"NTG", name:"TS Nguyễn Thuỳ Giang", phone:"0906160383",avatar:"avatars/0906160383.jpg",orgClass:"vsdhld",
         role:"Thành viên BCN", position:"Viện trưởng",
         organization:"Viện Sau Đại học và Lãnh đạo — Trường Đại học Hoa Sen",
         cohort:"Lãnh đạo VSĐH&LĐ · HSU",
@@ -2417,7 +2431,9 @@
     const grid = document.getElementById('membersGrid');
     members.forEach(m => {
       const card = document.createElement('div');
-      card.className = 'member-card' + (m.isChair ? ' chairman' : '');
+      card.className = 'member-card'
+        + (m.isChair ? ' chairman' : '')
+        + (m.orgClass ? ' ' + m.orgClass : '');
       card.dataset.filter = _filterText(m);
       card.onclick = () => openModal(m.id);
       card.innerHTML = `
@@ -2440,7 +2456,9 @@
 
     combined.forEach(m => {
       const card = document.createElement('div');
-      card.className = 'community-card' + (m._bcn ? ' bcn' : '');
+      card.className = 'community-card'
+        + (m._bcn ? ' bcn' : '')
+        + (m.orgClass ? ' ' + m.orgClass : '');
       card.dataset.filter = _filterText(m);
       card.onclick = () => m._bcn ? openModal(m.id) : openCommunityModal(m.id);
       const avatarInner = m.avatar
